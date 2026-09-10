@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390">
+<rect width="1000" height="390" rx="24" fill="#edf0ff"/>
+<circle cx="936" cy="54" r="93" fill="#dbe5ff"/><circle cx="44" cy="362" r="104" fill="#d6eee6"/>
+<rect x="32" y="40" width="410" height="294" rx="14" fill="#172b3a"/><path d="M46 40h382q14 0 14 14v32H32V54q0-14 14-14" fill="#2c4253"/>
+<circle cx="54" cy="64" r="5" fill="#fb9f91"/><circle cx="73" cy="64" r="5" fill="#f8d77c"/><circle cx="92" cy="64" r="5" fill="#93d3bb"/>
+<text x="125" y="69" font-family="sans-serif" font-size="16" fill="#f3f6ff">index.html</text>
+<g font-family="monospace" font-size="20"><text x="58" y="125" fill="#9bdcca">&lt;main&gt;</text><text x="76" y="168" fill="#aebdff">&lt;h1&gt;<tspan fill="#fff">Hello, web!</tspan>&lt;/h1&gt;</text><text x="76" y="211" fill="#aebdff">&lt;p&gt;<tspan fill="#fff">My first page.</tspan>&lt;/p&gt;</text><text x="58" y="254" fill="#9bdcca">&lt;/main&gt;</text></g>
+<rect x="56" y="283" width="133" height="28" rx="14" fill="#345a63"/><text x="72" y="302" font-family="sans-serif" font-size="14" fill="#fff">1. Edit + save</text>
+<circle cx="496" cy="184" r="30" fill="#fff"/><path d="M480 184h30m-10-10 10 10-10 10" fill="none" stroke="#00665f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="550" y="40" width="418" height="294" rx="14" fill="#fff" stroke="#bcc9ea" stroke-width="2"/><path d="M564 40h390q14 0 14 14v32H550V54q0-14 14-14" fill="#dce4f8"/><rect x="573" y="52" width="265" height="22" rx="7" fill="#fff"/><text x="585" y="68" font-family="sans-serif" font-size="13" fill="#3b5365">Your browser · index.html</text>
+<text x="580" y="150" font-family="sans-serif" font-size="36" font-weight="700" fill="#182b3a">Hello, web!</text><text x="580" y="194" font-family="sans-serif" font-size="23" fill="#42596a">My first page.</text><path d="M580 225h330" stroke="#dde6e8" stroke-width="2"/>
+<rect x="578" y="283" width="141" height="28" rx="14" fill="#e0f2eb"/><text x="594" y="302" font-family="sans-serif" font-size="14" fill="#005e54">2. Refresh + check</text>
+<text x="500" y="370" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#42596a">Small changes in your code become visible changes on your page.</text></svg>
