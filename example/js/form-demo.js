@@ -1,16 +1,11 @@
 const form = document.querySelector("#contact-form");
 const result = document.querySelector("#form-result");
 
-// Keep this practice form local, including keyboard submission.
+// The browser's own checks run first. This only runs when they pass,
+// and keeps the practice form on the page instead of reloading it.
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-});
-
-document.querySelector("#check-form").addEventListener("click", function () {
-  result.textContent = "";
-  if (form.reportValidity()) {
-    result.textContent = "Inputs pass the browser checks. Nothing was sent.";
-  }
+  result.textContent = "All checks passed. Nothing was sent.";
 });
 
 form.addEventListener("input", function () {

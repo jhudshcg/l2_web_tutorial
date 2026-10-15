@@ -1,0 +1,28 @@
+/* Small phones (440px and narrower).
+   Large cards (diagrams, demos, tasks, quizzes, code blocks) run edge to edge so their content gets the full
+   screen width: the left and right borders and rounded corners are dropped and the top and bottom borders stay.
+   Short 1 to 3 line cards (why-panel, recap, link cards, step strip, table cards) are left alone.
+   To include another large card, add its selector to the first rule. */
+@media (max-width: 440px) {
+  :root { --gutter: 1rem; }
+
+  .fig, .live, .lab, .panel, .task, .check, .more, .debug-check, .understanding .quiz, .result,
+  .lesson-visual, main > pre, main > .code-title, main > details > pre, .compare > pre {
+    margin-inline: calc(var(--gutter) * -1);
+    border-inline: 0;
+    border-radius: 0;
+  }
+  .lesson-visual img { border-radius: 0; }
+  .code-title + pre { border-radius: 0; }
+
+  /* Keep a visible top edge on the coloured call-outs now that the left accent bar is gone. */
+  .task { border-top: 4px solid var(--teal); }
+  .check { border-top: 4px solid var(--focus); }
+
+  /* Use the width for content, not padding. */
+  .fig { padding-inline: .5rem; }
+  .live, .lab, .panel, .task, .check, .more, .understanding .quiz { padding-inline: .75rem; }
+  .debug-check { padding-inline: .75rem; }
+  .debug-check .quiz { margin-inline: -.75rem; border-inline: 0; border-radius: 0; }
+  .result { padding-inline: .75rem; }
+}

@@ -1,12 +1,498 @@
 <!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Elements and attributes | Web project workshop</title><link rel="stylesheet" href="tutorial.css"><script src="tutorial.js" defer></script></head>
-<body data-step="2"><a class="skip" href="#main">Skip to lesson</a><header class="site-header"><a href="project_tutorial.html">Web project workshop</a><p>Level 2 • HTML &amp; CSS essentials</p></header><div class="shell"><nav class="lesson-nav" aria-label="Tutorial lessons"><a href="project_tutorial.html">Start here</a><details class="lesson-menu" open><summary>Browse the six lessons</summary><ol><li><a href="01-first-page.html">Your first HTML page</a></li><li><a href="02-elements-attributes.html" aria-current="page">Elements and attributes</a></li><li><a href="03-semantic-pages.html">Pages with meaning</a></li><li><a href="04-css-basics.html">Style with CSS</a></li><li><a href="05-responsive-layout.html">Responsive layouts</a></li><li><a href="06-forms-testing.html">Forms and project checks</a></li></ol><p><a href="example/index.html">View the reference site</a></p></details></nav><main id="main"><div class="lesson-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 13 4-4m-6 7-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 1 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0"/></svg><span>Step 2 of 6</span><span class="badge-topic">Build</span></div><h1>Elements and attributes</h1><p class="intro">An element gives content a job. An attribute adds information to an element.</p><section class="recap"><h2>Start with what you know</h2><p>Open <code>index.html</code> from your OneDrive <strong>L2 Digital/Web Development/website</strong> folder in VS Code. Preview it with <strong>Open in Integrated Browser</strong>. Point to one heading and one paragraph in the code, then find them in the preview.</p><p>Last time you used <code>&lt;p&gt;Some words&lt;/p&gt;</code>. The tags and their content together form an <strong>element</strong>. Now you will give some elements extra information, such as where a link should go.</p></section><h2>1. Tags, elements and attributes</h2><p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18"/></svg>Example code</p><pre tabindex="0" aria-label="Example code"><code>&lt;a href=&quot;https://www.w3schools.com/&quot;&gt;Explore W3Schools&lt;/a&gt;</code></pre><ul><li><code>&lt;a href="…"&gt;</code> is the opening tag.</li><li><code>Explore W3Schools</code> is the content.</li><li><code>&lt;/a&gt;</code> is the closing tag. Notice the slash.</li><li>The whole example is an <strong>anchor element</strong>: a link.</li><li><code>href</code> is an <strong>attribute name</strong>. Its quoted value is the destination.</li></ul><p>Put attributes inside the opening tag. Use straight quotes <code>"</code> around values. Most elements wrap content; <code>img</code>, <code>meta</code> and <code>link</code> are <strong>void elements</strong>: they have no closing tag or inner content.</p>
-<div class="task"><h2>Make your first link in two small steps</h2><p>First put this inside <code>body</code>: <code>&lt;p&gt;Explore web examples&lt;/p&gt;</code>. Save and check: it is ordinary text.</p><p>Now replace that whole paragraph with <code>&lt;p&gt;&lt;a href="https://www.w3schools.com/"&gt;Explore web examples&lt;/a&gt;&lt;/p&gt;</code>. Save and check again. The words are now a link; click them to test the destination, then go Back.</p><p>Changing the link’s text changes what visitors read. Changing <code>href</code> changes where they go. You can edit either without changing the other.</p></div><h2>2. Add useful content</h2><p>Keep your existing file. Add this inside <code>body</code>, after the introduction and before <code>&lt;/body&gt;</code>.</p><p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18"/></svg>index.html — add inside body</p><pre tabindex="0" aria-label="index.html — add inside body"><code>&lt;h2&gt;Latest release&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Morning Light&lt;/strong&gt; is Alex&#x27;s new album.&lt;/p&gt;
-&lt;h2&gt;Explore Alex&#x27;s work&lt;/h2&gt;
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elements and attributes | Web project workshop</title>
+  <link rel="stylesheet" href="tutorial.css">
+  <script src="tutorial.js" defer></script>
+</head>
+
+<body data-step="2"><a class="skip" href="#main">Skip to lesson</a>
+  <header class="site-header"><a href="project_tutorial.html">Web project workshop</a>
+    <p>Level 2 • HTML &amp; CSS essentials</p>
+  </header>
+  <div class="shell">
+    <nav class="lesson-nav" aria-label="Tutorial lessons"><a href="project_tutorial.html">Start here</a>
+      <details class="lesson-menu" open>
+        <summary>Browse the seven lessons</summary>
+        <ol>
+          <li><a href="01-first-page.html">Your first HTML page</a></li>
+          <li><a href="02-elements-attributes.html" aria-current="page">Elements and attributes</a></li>
+          <li><a href="03-semantic-pages.html">Pages with meaning</a></li>
+          <li><a href="04-css-basics.html">Style with CSS</a></li>
+          <li><a href="05-responsive-layout.html">Responsive layouts</a></li>
+          <li><a href="06-forms.html">Forms and validation</a></li>
+          <li><a href="07-testing-publishing.html">Test and publish</a></li>
+        </ol>
+        <p><a href="example/index.html">View the reference site</a></p>
+      </details>
+    </nav>
+    <main id="main">
+      <div class="lesson-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path
+            d="m10 13 4-4m-6 7-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 1 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" />
+        </svg><span>Step 2 of 7</span><span class="badge-topic">Build</span></div>
+      <h1>Elements and attributes</h1>
+      <p class="intro">An element gives content a job. An attribute adds information to an element.</p>
+      <section class="recap">
+        <h2>Start with what you know</h2>
+        <p>Last time you wrote <code>&lt;p&gt;Some words&lt;/p&gt;</code>. Open <code>index.html</code> in VS Code and
+          preview it. Now we add extra information to elements.</p>
+      </section>
+
+      <h2>1. Tags, elements and attributes</h2>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 276" role="img" aria-labelledby="link-title">
+          <title id="link-title">Anatomy of a link: a whole element made of an opening tag, the content Read the news
+            and a closing tag. The opening tag holds the attribute href, whose value is news.html.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <text x="380" y="30" text-anchor="middle" font-size="24" font-weight="700" fill="#182b3a">Element</text>
+          <path d="M25 52V44H735V52" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <text class="mono" x="25" y="100" font-size="32" fill="#00665f" textLength="38"
+            lengthAdjust="spacingAndGlyphs">&lt;a</text>
+          <text class="mono" x="82" y="100" font-size="32" fill="#925000" textLength="77"
+            lengthAdjust="spacingAndGlyphs">href</text>
+          <text class="mono" x="159" y="100" font-size="32" fill="#182b3a" textLength="19"
+            lengthAdjust="spacingAndGlyphs">=</text>
+          <text class="mono" x="179" y="100" font-size="32" fill="#91475d" textLength="211"
+            lengthAdjust="spacingAndGlyphs">"news.html"</text>
+          <text class="mono" x="390" y="100" font-size="32" fill="#00665f" textLength="19"
+            lengthAdjust="spacingAndGlyphs">&gt;</text>
+          <text class="mono" x="409" y="100" font-size="32" fill="#182b3a" textLength="250"
+            lengthAdjust="spacingAndGlyphs">Read the news</text>
+          <text class="mono" x="659" y="100" font-size="32" fill="#00665f" textLength="77"
+            lengthAdjust="spacingAndGlyphs">&lt;/a&gt;</text>
+          <path d="M82 118V126H160V118" fill="none" stroke="#925000" stroke-width="2.5" />
+          <path d="M179 118V126H390V118" fill="none" stroke="#91475d" stroke-width="2.5" />
+          <text x="121" y="150" text-anchor="middle" font-size="21" font-weight="700" fill="#925000">Attribute</text>
+          <text x="121" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#925000">name</text>
+          <text x="284" y="150" text-anchor="middle" font-size="21" font-weight="700" fill="#91475d">Attribute</text>
+          <text x="284" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#91475d">value</text>
+          <path d="M25 198V206H407V198" fill="none" stroke="#00665f" stroke-width="2.5" />
+          <path d="M411 198V206H656V198" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <path d="M660 198V206H735V198" fill="none" stroke="#00665f" stroke-width="2.5" />
+          <text x="216" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#00665f">Opening tag</text>
+          <text x="216" y="260" text-anchor="middle" font-size="19" fill="#182b3a">Holds the attribute</text>
+          <text x="534" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#182b3a">Content</text>
+          <text x="534" y="260" text-anchor="middle" font-size="19" fill="#182b3a">What people read</text>
+          <text x="690" y="234" text-anchor="middle" font-size="22" font-weight="700" fill="#00665f">Closing tag</text>
+          <text x="690" y="260" text-anchor="middle" font-size="19" fill="#182b3a">Ends it</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 352" role="img" aria-labelledby="link-title-n">
+          <title id="link-title-n">Anatomy of a link: a whole element made of an opening tag, the content Read the news
+            and a closing tag. The opening tag holds the attribute href, whose value is news.html.</title>
+          <path d="M30 26H24V152H30" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <text class="mono" x="40" y="48" font-size="22" fill="#00665f" textLength="26"
+            lengthAdjust="spacingAndGlyphs">&lt;a</text>
+          <text class="mono" x="80" y="48" font-size="22" fill="#925000" textLength="53"
+            lengthAdjust="spacingAndGlyphs">href</text>
+          <text class="mono" x="133" y="48" font-size="22" fill="#182b3a" textLength="13"
+            lengthAdjust="spacingAndGlyphs">=</text>
+          <text class="mono" x="146" y="48" font-size="22" fill="#91475d" textLength="145"
+            lengthAdjust="spacingAndGlyphs">"news.html"</text>
+          <text class="mono" x="291" y="48" font-size="22" fill="#00665f" textLength="13"
+            lengthAdjust="spacingAndGlyphs">&gt;</text>
+          <text class="mono" x="64" y="96" font-size="22" fill="#182b3a" textLength="172"
+            lengthAdjust="spacingAndGlyphs">Read the news</text>
+          <text class="mono" x="40" y="144" font-size="22" fill="#00665f" textLength="53"
+            lengthAdjust="spacingAndGlyphs">&lt;/a&gt;</text>
+          <rect x="24" y="186" width="16" height="16" fill="#925000" />
+          <text x="50" y="200" font-size="17" fill="#182b3a"><tspan font-weight="700">Attribute name:</tspan> href</text>
+          <rect x="24" y="220" width="16" height="16" fill="#91475d" />
+          <text x="50" y="234" font-size="17" fill="#182b3a"><tspan font-weight="700">Attribute value:</tspan> "news.html"</text>
+          <rect x="24" y="254" width="16" height="16" fill="#182b3a" />
+          <text x="50" y="268" font-size="17" fill="#182b3a"><tspan font-weight="700">Content:</tspan> what people read</text>
+          <rect x="24" y="288" width="16" height="16" fill="#00665f" />
+          <text x="50" y="302" font-size="17" fill="#182b3a"><tspan font-weight="700">Tags:</tspan> opening and closing</text>
+          <path d="M24 322V330H40V322" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <text x="50" y="336" font-size="17" fill="#182b3a">All together: <tspan font-weight="700">one element</tspan></text>
+        </svg>
+        <figcaption>Attributes go inside the opening tag. Put their values in straight quotes <code>"</code>.
+        </figcaption>
+      </figure>
+
+      <section class="task">
+        <h2>Make your first link</h2>
+        <ol>
+          <li>Put the plain paragraph inside <code>body</code>. Save and check.</li>
+          <li>Replace it with the link version. Save, click the link, then go Back.</li>
+        </ol>
+        <p class="code-title">Step 1: plain text</p>
+        <pre tabindex="0" aria-label="Step 1: plain text"><code>&lt;p&gt;Explore web examples&lt;/p&gt;</code></pre>
+        <p class="code-title">Step 2: add a link</p>
+        <pre tabindex="0" aria-label="Step 2: add a link"><code>&lt;p&gt;<span class="hl">&lt;a href=&quot;https://www.w3schools.com/&quot;&gt;</span>Explore web examples<span class="hl">&lt;/a&gt;</span>&lt;/p&gt;</code></pre>
+        <p>Change the text to change what people read. Change <code>href</code> to change where they go.</p>
+      </section>
+
+      <h2>2. Add headings, a list and a link</h2>
+      <p>Add this inside <code>body</code>, after the introduction. <code>strong</code> marks important text.
+        <code>ul</code> is a bulleted list. Each item is an <code>li</code>.</p>
+      <div class="compare">
+        <div>
+          <p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18" />
+            </svg>index.html — add inside body</p>
+          <pre tabindex="0" aria-label="index.html — add inside body"><code>&lt;h2&gt;Latest release&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Morning Light&lt;/strong&gt; is Alex's new album.&lt;/p&gt;
+&lt;h2&gt;Explore Alex's work&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Morning Light — album&lt;/li&gt;
   &lt;li&gt;City Walk — single&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/&quot;&gt;Explore web examples&lt;/a&gt;&lt;/p&gt;</code></pre><p><code>h2</code> introduces a main section. <code>strong</code> marks importance. An unordered list (<code>ul</code>) uses bullets; an ordered list (<code>ol</code>) uses numbers. Each item is an <code>li</code>.</p><p><strong>Nesting</strong> means putting an element inside another. In the example, each <code>li</code> is inside <code>ul</code>. Close the inner element before closing the outer one. Indentation makes this easier to read.</p>
-<aside class="why-panel"><h2>Why use images—and describe them?</h2><p>A cover image helps a fan recognise an album. A product image helps a customer understand what is being offered. Choose images that explain or support the content and fit the client’s style.</p><p>Some visitors use a <strong>screen reader</strong>, which turns page content into speech or braille. Useful <code>alt</code> text gives them the information a meaningful image provides. It can also help when the image does not load. An image used only as decoration needs an empty alternative, so it does not add distracting information.</p><p>Large image files can make visitors wait, especially on a slow mobile connection. Later, choose an appropriate image size and compress it without making it unclear. Add important product details as real text too, so visitors can read and enlarge them.</p></aside><h2>3. Add an image</h2><ol><li>Create an <code>images</code> folder beside <code>index.html</code>.</li><li>Save <a href="example/images/album.svg" download="album.svg">this original practice album image</a> into it. If it opens instead, use your browser’s Save As option and keep the filename <code>album.svg</code>.</li><li>Add this below the album paragraph.</li></ol><p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18"/></svg>index.html — image element</p><pre tabindex="0" aria-label="index.html — image element"><code>&lt;img src=&quot;images/album.svg&quot; alt=&quot;Morning Light album cover: a yellow sun above teal hills&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;</code></pre><p><code>src</code> gives the file path. Here it means “look in the images folder for album.svg”. <code>alt</code> gives a text alternative describing the image’s purpose/content. Use <code>alt=""</code> for a purely decorative image. <code>width</code> and <code>height</code> describe the image dimensions; CSS will make it shrink to fit later.</p><p>A path is a file’s location. Match spelling, capitals and extensions exactly. Use forward slashes <code>/</code>. A link to a page beside this file would be <code>href="contact.html"</code>. A link to another website normally starts with <code>https://</code>.</p><section class="task"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-8Z"/></svg>Try it</h2><p>Add a third list item. Change the link text so it describes the destination. Then briefly rename your image file: what happens in the browser? Restore the filename and refresh.</p><p><strong>Expected result:</strong> headings, a three-item list, a working external link and a visible album cover. A wrong image path should reveal why matching filenames matters.</p></section><section class="check"><h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M8 15a7 7 0 1 1 8 0l-1 3H9Z"/></svg>Check your understanding</h2><details><summary>In the image example, which is the attribute and which is its value?</summary><p><code>src</code> is an attribute name; <code>images/album.svg</code> is its value. The entire <code>&lt;img …&gt;</code> is an element.</p></details><details><summary>Why is &lt;p&gt;&lt;strong&gt;New!&lt;/p&gt;&lt;/strong&gt; incorrect?</summary><p>The elements overlap. Close <code>strong</code> before closing <code>p</code>: <code>&lt;p&gt;&lt;strong&gt;New!&lt;/strong&gt;&lt;/p&gt;</code>.</p></details></section><h2>Apply it to your project</h2><p>Add useful text and an image you have permission to use. Start your asset table: filename, use, dimensions, format, file size, source, licence and date checked. The practice SVG was created for this tutorial and may be reused for practice.</p><section><h2 class="reading-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v15M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z"/></svg>Explore on W3Schools</h2><p>Open a topic and try its “Try it Yourself” example. Change one value and explain the result. Use your browser’s Back button to return here.</p><ul><li><a href="https://www.w3schools.com/html/html_elements.asp">Elements and nesting</a></li><li><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a></li><li><a href="https://www.w3schools.com/html/html_links.asp">Links</a></li><li><a href="https://www.w3schools.com/html/html_images.asp">Images and alternative text</a></li></ul></section><section class="understanding"><h2>Pause and check</h2><p>Make a prediction before clicking. Read the feedback, then try a similar change in your own page.</p><fieldset class="quiz" id="quiz-2-1"><legend>In &lt;a href=&quot;news.html&quot;&gt;Read the news&lt;/a&gt;, what controls the destination?</legend><p class="small">Choose one answer. You can try again.</p><div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="Those words are the visible link text. Look for the attribute that gives the location." disabled><span class="answer-letter">A</span><span>Read the news</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="true" data-feedback="Correct. The href attribute gives the destination; the words between tags are the visible text." disabled><span class="answer-letter">B</span><span>href=&quot;news.html&quot;</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="That closes the link element. It does not set a destination." disabled><span class="answer-letter">C</span><span>&lt;/a&gt;</span></button></div><p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript><p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p><details><summary>Answer and explanation</summary><p>href=&quot;news.html&quot;. Correct. The href attribute gives the destination; the words between tags are the visible text.</p></details></noscript></fieldset><fieldset class="quiz" id="quiz-2-2"><legend>Your image is inside the images folder beside index.html. Which path matches?</legend><p class="small">Choose one answer. You can try again.</p><div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="That looks beside index.html, rather than inside the images folder." disabled><span class="answer-letter">A</span><span>src=&quot;album.svg&quot;</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="That names only the folder. Include the image filename too." disabled><span class="answer-letter">B</span><span>src=&quot;images&quot;</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="true" data-feedback="Correct. The path names the folder, then the file inside it." disabled><span class="answer-letter">C</span><span>src=&quot;images/album.svg&quot;</span></button></div><p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript><p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p><details><summary>Answer and explanation</summary><p>src=&quot;images/album.svg&quot;. Correct. The path names the folder, then the file inside it.</p></details></noscript></fieldset></section><section class="debug-check" id="debug-2"><p class="kicker">Spot the error</p><h2>Why is this link not appearing as expected?</h2><p>The link should say “Contact” and open contact.html. The destination starts with a quote but is not closed properly.</p><p class="code-title">Broken example — find the mistake</p><pre tabindex="0" aria-label="Broken code to inspect"><code>&lt;a href=&quot;contact.html&gt;Contact&lt;/a&gt;</code></pre><details><summary>Need a hint?</summary><p>Attribute values in these examples have a quote on each side: name=&quot;value&quot;.</p></details><fieldset class="quiz"><legend>Which edit fixes the attribute?</legend><p class="small">Choose the fix. If it is not right, read the clue and try again.</p><div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="href is an attribute, not an element. It does not use a closing tag." disabled><span class="answer-letter">A</span><span>Add &lt;/href&gt; at the end</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="false" data-feedback="Without href, this would no longer give the link its intended destination." disabled><span class="answer-letter">B</span><span>Remove href completely</span></button><button type="button" class="quiz-option" aria-pressed="false" data-correct="true" data-feedback="Correct. The attribute value needs its closing quote before the &gt; that ends the opening tag." disabled><span class="answer-letter">C</span><span>Add a closing quote after contact.html</span></button></div><p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript><p>Clickable answers need JavaScript. Use the hint and open the worked fix below to check your answer.</p></noscript></fieldset><details class="debug-solution"><summary>Show the corrected code and explanation</summary><pre tabindex="0" aria-label="Corrected code"><code>&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;</code></pre><p>The quotes enclose only contact.html. The &gt; then ends the opening tag, and Contact is the visible link text.</p></details><p class="small"><strong>Try the fix:</strong> Use your practice files to make the correction. Save, check the preview and explain what changed in your own words.</p></section><nav class="pager" aria-label="Lesson navigation"><a href="01-first-page.html">← Previous lesson</a><a href="03-semantic-pages.html">Next lesson →</a></nav></main></div><footer>Build a little. Check it. Make it your own. • Works offline; further-reading links need internet.</footer></body></html>
+&lt;p&gt;&lt;a href=&quot;https://www.w3schools.com/&quot;&gt;Explore web examples&lt;/a&gt;&lt;/p&gt;</code></pre>
+        </div>
+        <div class="result">
+          <h2>Latest release</h2>
+          <p><strong>Morning Light</strong> is Alex's new album.</p>
+          <h2>Explore Alex's work</h2>
+          <ul>
+            <li>Morning Light — album</li>
+            <li>City Walk — single</li>
+          </ul>
+          <p><a href="https://www.w3schools.com/">Explore web examples</a></p>
+        </div>
+      </div>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 262" role="img" aria-labelledby="nest-title">
+          <title id="nest-title">Two diagrams. Correct nesting: a strong element sits fully inside a p element. Wrong:
+            the strong element sticks out past the end of the p element.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <text x="190" y="30" text-anchor="middle" font-size="24" font-weight="700" fill="#00665f">Nested: correct</text>
+          <rect x="20" y="50" width="340" height="130" rx="8" fill="#e4f3ed" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="36" y="80" font-size="22" font-weight="700" fill="#00665f">&lt;p&gt;</text>
+          <rect x="60" y="94" width="260" height="76" rx="6" fill="#fff2d7" stroke="#925000" stroke-width="3" />
+          <text class="mono" x="74" y="120" font-size="20" font-weight="700" fill="#925000">&lt;strong&gt;</text>
+          <text x="74" y="156" font-size="28" font-weight="700" fill="#182b3a">New!</text>
+          <text class="mono" x="190" y="214" text-anchor="middle" font-size="20" fill="#182b3a">&lt;p&gt;&lt;strong&gt;New!&lt;/strong&gt;&lt;/p&gt;</text>
+          <text x="190" y="248" text-anchor="middle" font-size="22" font-weight="700" fill="#00665f">Inner element closes first</text>
+          <text x="570" y="30" text-anchor="middle" font-size="24" font-weight="700" fill="#91475d">Overlapping: wrong</text>
+          <rect x="400" y="50" width="230" height="130" rx="8" fill="#e4f3ed" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="416" y="80" font-size="22" font-weight="700" fill="#00665f">&lt;p&gt;</text>
+          <rect x="440" y="94" width="300" height="76" rx="6" fill="#fcebf0" stroke="#91475d" stroke-width="3"
+            stroke-dasharray="7 5" />
+          <text class="mono" x="454" y="120" font-size="20" font-weight="700" fill="#91475d">&lt;strong&gt;</text>
+          <text x="454" y="156" font-size="28" font-weight="700" fill="#182b3a">New!</text>
+          <text class="mono" x="570" y="214" text-anchor="middle" font-size="20" fill="#182b3a">&lt;p&gt;&lt;strong&gt;New!&lt;/p&gt;&lt;/strong&gt;</text>
+          <text x="570" y="248" text-anchor="middle" font-size="22" font-weight="700" fill="#91475d">The p closes too early</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 420" role="img" aria-labelledby="nest-title-n">
+          <title id="nest-title-n">Two diagrams. Correct nesting: a strong element sits fully inside a p element. Wrong:
+            the strong element sticks out past the end of the p element.</title>
+          <text x="180" y="24" text-anchor="middle" font-size="18" font-weight="700" fill="#00665f">Nested: correct</text>
+          <rect x="16" y="36" width="328" height="104" rx="8" fill="#e4f3ed" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="28" y="60" font-size="16" font-weight="700" fill="#00665f">&lt;p&gt;</text>
+          <rect x="40" y="70" width="250" height="60" rx="6" fill="#fff2d7" stroke="#925000" stroke-width="3" />
+          <text class="mono" x="52" y="92" font-size="16" font-weight="700" fill="#925000">&lt;strong&gt;</text>
+          <text x="52" y="119" font-size="22" font-weight="700" fill="#182b3a">New!</text>
+          <text class="mono" x="180" y="168" text-anchor="middle" font-size="16" fill="#182b3a">&lt;p&gt;&lt;strong&gt;New!&lt;/strong&gt;&lt;/p&gt;</text>
+          <text x="180" y="194" text-anchor="middle" font-size="17" font-weight="700" fill="#00665f">Inner element closes first</text>
+          <text x="180" y="234" text-anchor="middle" font-size="18" font-weight="700" fill="#91475d">Overlapping: wrong</text>
+          <rect x="16" y="246" width="220" height="104" rx="8" fill="#e4f3ed" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="28" y="270" font-size="16" font-weight="700" fill="#00665f">&lt;p&gt;</text>
+          <rect x="40" y="280" width="300" height="60" rx="6" fill="#fcebf0" stroke="#91475d" stroke-width="3"
+            stroke-dasharray="7 5" />
+          <text class="mono" x="52" y="302" font-size="16" font-weight="700" fill="#91475d">&lt;strong&gt;</text>
+          <text x="52" y="329" font-size="22" font-weight="700" fill="#182b3a">New!</text>
+          <text class="mono" x="180" y="378" text-anchor="middle" font-size="16" fill="#182b3a">&lt;p&gt;&lt;strong&gt;New!&lt;/p&gt;&lt;/strong&gt;</text>
+          <text x="180" y="404" text-anchor="middle" font-size="17" font-weight="700" fill="#91475d">The p closes too early</text>
+        </svg>
+        <figcaption><strong>Nesting</strong> means one element inside another. Close the inner one first.</figcaption>
+      </figure>
+
+      <h2>3. Add an image</h2>
+      <ol class="flow">
+        <li><strong>Make a folder</strong><span>Create <code>images</code> beside <code>index.html</code>.</span></li>
+        <li><strong>Copy the picture</strong><span>Copy <code>cat-shades.png</code> from <code>assets/practice</code>
+            into <code>images</code>.</span></li>
+        <li><strong>Add the img tag</strong><span>Put it under a heading and paragraph. Save and preview.</span></li>
+      </ol>
+      <figure class="lesson-visual">
+        <img src="assets/practice/cat-shades.png" width="300" height="200"
+          alt="A ginger cat wearing black sunglasses">
+        <figcaption class="small">Practice image: <code>cat-shades.png</code>, about 21 KB, so it is already web-sized.
+          You can also right-click it and choose Save image as.</figcaption>
+      </figure>
+      <div class="compare">
+        <div>
+          <p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18" />
+            </svg>index.html — image in context</p>
+          <pre tabindex="0" aria-label="index.html — image in context"><code>&lt;h2&gt;Meet Milo&lt;/h2&gt;
+&lt;p&gt;Milo is a very cool cat. He loves sunny windows.&lt;/p&gt;
+<span class="hl">&lt;img src=&quot;images/cat-shades.png&quot; alt=&quot;A ginger cat wearing black sunglasses&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;</span></code></pre>
+        </div>
+        <div class="result">
+          <h2>Meet Milo</h2>
+          <p>Milo is a very cool cat. He loves sunny windows.</p>
+          <img src="assets/practice/cat-shades.png" alt="A ginger cat wearing black sunglasses" width="300"
+            height="200" style="max-width: 100%; height: auto">
+        </div>
+      </div>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 296" role="img" aria-labelledby="img-title">
+          <title id="img-title">The src attribute images/cat-shades.png matches the folder view: the images folder inside the
+            website folder holds cat-shades.png and any other images. The alt attribute describes the image. The width and
+            height attributes give its size. The img element has no closing tag.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <defs>
+            <symbol id="ic2-folder" viewBox="0 0 28 22">
+              <path d="M1 3h9l3 3h14v15H1z" fill="#fff2d7" stroke="#925000" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="ic2-file" viewBox="0 0 22 28">
+              <path d="M2 1h12l6 6v20H2z" fill="#ffffff" stroke="#3150a1" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+          </defs>
+          <text x="10" y="26" font-size="22" font-weight="700" fill="#00665f">Folder view</text>
+          <use href="#ic2-folder" x="10" y="44" width="34" height="27" />
+          <text x="52" y="66" font-size="22" fill="#182b3a">website</text>
+          <use href="#ic2-file" x="40" y="86" width="24" height="30" />
+          <text class="mono" x="74" y="108" font-size="21" fill="#182b3a">index.html</text>
+          <rect x="34" y="124" width="272" height="40" rx="8" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <use href="#ic2-folder" x="42" y="131" width="34" height="27" />
+          <text x="84" y="152" font-size="22" font-weight="700" fill="#925000">images</text>
+          <rect x="64" y="166" width="242" height="40" rx="8" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <use href="#ic2-file" x="72" y="171" width="24" height="30" />
+          <text class="mono" x="108" y="194" font-size="21" fill="#182b3a">cat-shades.png</text>
+          <use href="#ic2-file" x="72" y="214" width="24" height="30" />
+          <text class="mono" x="108" y="236" font-size="21" fill="#42596a">logo.svg</text>
+          <use href="#ic2-file" x="72" y="254" width="24" height="30" />
+          <text class="mono" x="108" y="276" font-size="21" fill="#42596a">banner.jpg</text>
+          <path d="M308 186C320 186 322 92 334 92" fill="none" stroke="#925000" stroke-width="2.5"
+            stroke-dasharray="6 5" />
+          <text x="340" y="26" font-size="22" font-weight="700" fill="#00665f">The img tag</text>
+          <text class="mono" x="340" y="62" font-size="20" fill="#182b3a">&lt;img</text>
+          <text class="mono" x="360" y="100" font-size="20" fill="#925000">src="images/cat-shades.png"</text>
+          <text x="360" y="126" font-size="18" fill="#925000">The path: folder, then file</text>
+          <text class="mono" x="360" y="172" font-size="20" fill="#91475d">alt="A ginger cat wearing…"</text>
+          <text x="360" y="198" font-size="18" fill="#91475d">What it shows, for screen readers</text>
+          <text class="mono" x="360" y="244" font-size="20" fill="#3150a1">width="300" height="200"&gt;</text>
+          <text x="360" y="270" font-size="18" fill="#3150a1">Size in pixels. No closing tag.</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 446" role="img" aria-labelledby="img-title-n">
+          <title id="img-title-n">The src attribute images/cat-shades.png matches the folder view: the images folder inside
+            the website folder holds cat-shades.png and any other images. The alt attribute describes the image. The width
+            and height attributes give its size. The img element has no closing tag.</title>
+          <defs>
+            <symbol id="ic2n-folder" viewBox="0 0 28 22">
+              <path d="M1 3h9l3 3h14v15H1z" fill="#fff2d7" stroke="#925000" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="ic2n-file" viewBox="0 0 22 28">
+              <path d="M2 1h12l6 6v20H2z" fill="#ffffff" stroke="#3150a1" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+          </defs>
+          <text x="6" y="20" font-size="17" font-weight="700" fill="#00665f">Folder view</text>
+          <use href="#ic2n-folder" x="6" y="32" width="24" height="19" />
+          <text x="38" y="48" font-size="17" fill="#182b3a">website</text>
+          <use href="#ic2n-file" x="24" y="68" width="18" height="23" />
+          <text class="mono" x="50" y="85" font-size="16" fill="#182b3a">index.html</text>
+          <rect x="16" y="98" width="200" height="30" rx="7" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <use href="#ic2n-folder" x="24" y="104" width="24" height="19" />
+          <text x="56" y="119" font-size="17" font-weight="700" fill="#925000">images</text>
+          <rect x="34" y="134" width="200" height="30" rx="7" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <use href="#ic2n-file" x="42" y="138" width="18" height="23" />
+          <text class="mono" x="68" y="155" font-size="16" fill="#182b3a">cat-shades.png</text>
+          <use href="#ic2n-file" x="42" y="172" width="18" height="23" />
+          <text class="mono" x="68" y="189" font-size="16" fill="#42596a">logo.svg</text>
+          <use href="#ic2n-file" x="42" y="206" width="18" height="23" />
+          <text class="mono" x="68" y="223" font-size="16" fill="#42596a">banner.jpg</text>
+          <text x="6" y="268" font-size="17" font-weight="700" fill="#00665f">The img tag</text>
+          <text class="mono" x="6" y="294" font-size="16" fill="#182b3a">&lt;img</text>
+          <text class="mono" x="20" y="320" font-size="16" fill="#925000">src="images/cat-shades.png"</text>
+          <text x="20" y="340" font-size="15" fill="#925000">The path: folder, then file</text>
+          <text class="mono" x="20" y="366" font-size="16" fill="#91475d">alt="A ginger cat wearing…"</text>
+          <text x="20" y="386" font-size="15" fill="#91475d">What it shows, for screen readers</text>
+          <text class="mono" x="20" y="412" font-size="16" fill="#3150a1">width="300" height="200"&gt;</text>
+          <text x="20" y="432" font-size="15" fill="#3150a1">Size in pixels. No closing tag.</text>
+        </svg>
+        <figcaption>All images live in <strong>one</strong> <code>images</code> folder. The path is
+          <code>images/filename</code>. Spelling, capitals and extensions must match.
+        </figcaption>
+      </figure>
+
+      <h3>Which image type?</h3>
+      <div class="skill-chips">
+        <span>.jpg: photos</span>
+        <span>.png: graphics, transparency</span>
+        <span>.webp: small photos and graphics</span>
+        <span>.svg: simple logos and icons. Sharp at any size</span>
+      </div>
+
+      <h3>Size images for the web</h3>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 190" role="img" aria-labelledby="size-title">
+          <title id="size-title">Bar chart, not to scale: a camera photo is about 3,000 KB, a web-ready image is under
+            100 KB. Smaller files load faster and use less mobile data.</title>
+          <text x="10" y="48" font-size="26" font-weight="700" fill="#182b3a">Camera photo</text>
+          <rect x="250" y="20" width="490" height="40" rx="6" fill="#91475d" />
+          <text x="266" y="49" font-size="26" font-weight="700" fill="#ffffff">about 3,000 KB</text>
+          <text x="10" y="112" font-size="26" font-weight="700" fill="#182b3a">Web-ready image</text>
+          <rect x="250" y="84" width="44" height="40" rx="6" fill="#00665f" />
+          <text x="308" y="113" font-size="26" font-weight="700" fill="#00665f">under 100 KB ✓</text>
+          <text x="380" y="166" text-anchor="middle" font-size="22" fill="#42596a">Smaller files load faster and use less mobile data. (Not to scale.)</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 216" role="img" aria-labelledby="size-title-n">
+          <title id="size-title-n">Bar chart, not to scale: a camera photo is about 3,000 KB, a web-ready image is
+            under 100 KB. Smaller files load faster and use less mobile data.</title>
+          <text x="10" y="26" font-size="18" font-weight="700" fill="#182b3a">Camera photo</text>
+          <rect x="10" y="36" width="340" height="34" rx="6" fill="#91475d" />
+          <text x="22" y="59" font-size="17" font-weight="700" fill="#ffffff">about 3,000 KB</text>
+          <text x="10" y="104" font-size="18" font-weight="700" fill="#182b3a">Web-ready image</text>
+          <rect x="10" y="114" width="30" height="34" rx="6" fill="#00665f" />
+          <text x="52" y="137" font-size="17" font-weight="700" fill="#00665f">under 100 KB ✓</text>
+          <text x="10" y="182" font-size="16" fill="#42596a">Smaller files load faster and use</text>
+          <text x="10" y="204" font-size="16" fill="#42596a">less mobile data. (Not to scale.)</text>
+        </svg>
+        <figcaption>Aim for each image to be under about 100 KB. Smaller is better.</figcaption>
+      </figure>
+      <ol class="flow">
+        <li><strong>Resize</strong><span>Make it the size it will be shown.</span></li>
+        <li><strong>Compress</strong><span>Shrink the file size without making it blurry.</span></li>
+        <li><strong>Name it well</strong><span>Lowercase, no spaces: <code>cat-shades.png</code></span></li>
+      </ol>
+      <aside class="why-panel">
+        <p><strong>Why describe images?</strong> Screen reader users hear the <code>alt</code> text. Everyone sees it
+          if the image fails to load.</p>
+      </aside>
+      <p>A link to a page in the same folder: <code>href="contact.html"</code>. A link to another website starts with
+        <code>https://</code>.</p>
+
+      <section class="task">
+        <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m13 2-9 12h7l-1 8 10-13h-8Z" />
+          </svg>Try it</h2>
+        <ol>
+          <li>Add a third list item.</li>
+          <li>Make the link text describe where it goes.</li>
+          <li>Change the image's <code>alt</code> text and <code>width</code>. Save and preview.</li>
+          <li>Rename your image file, refresh and look. Then rename it back.</li>
+        </ol>
+        <p><strong>Expected result:</strong> headings, a three-item list, a working link and the cat picture. A wrong
+          filename shows why exact paths matter.</p>
+      </section>
+
+      <p><strong>Project:</strong> add useful text and an image you have permission to use. Start your asset table:
+        filename, use, dimensions, format, file size, source, licence, date checked.</p>
+
+      <aside class="more">
+        <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 6v15M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z" />
+          </svg>Want more? W3Schools</h2>
+        <ul>
+          <li><a href="https://www.w3schools.com/html/html_elements.asp">Elements and nesting</a></li>
+          <li><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a></li>
+          <li><a href="https://www.w3schools.com/html/html_links.asp">Links</a></li>
+          <li><a href="https://www.w3schools.com/html/html_lists.asp">Lists</a></li>
+          <li><a href="https://www.w3schools.com/html/html_images.asp">Images and alternative text</a> (including
+            <code>alt=""</code> for decorative images)</li>
+          <li><a href="https://www.w3schools.com/html/html_filepaths.asp">File paths</a></li>
+        </ul>
+      </aside>
+
+      <section class="understanding">
+        <h2>Pause and check</h2>
+        <p>Predict first, then click. Try the idea in your own page.</p>
+        <fieldset class="quiz" id="quiz-2-1">
+          <legend>In &lt;a href=&quot;news.html&quot;&gt;Read the news&lt;/a&gt;, what controls the destination?</legend>
+          <p class="small">Choose one answer. You can try again.</p>
+          <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false"
+              data-correct="false"
+              data-feedback="That is the visible link text. Look for the attribute that gives the location."
+              disabled><span class="answer-letter">A</span><span>Read the news</span></button><button type="button"
+              class="quiz-option" aria-pressed="false" data-correct="true"
+              data-feedback="Correct. The href attribute gives the destination. The words between the tags are the visible text."
+              disabled><span class="answer-letter">B</span><span>href=&quot;news.html&quot;</span></button><button
+              type="button" class="quiz-option" aria-pressed="false" data-correct="false"
+              data-feedback="That closes the link element. It does not set a destination." disabled><span
+                class="answer-letter">C</span><span>&lt;/a&gt;</span></button></div>
+          <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
+            <p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p>
+            <details>
+              <summary>Answer and explanation</summary>
+              <p>href=&quot;news.html&quot;. The href attribute gives the destination. The words between the tags are
+                the visible text.</p>
+            </details>
+          </noscript>
+        </fieldset>
+        <fieldset class="quiz" id="quiz-2-2">
+          <legend>Your image is inside the images folder beside index.html. Which path matches?</legend>
+          <p class="small">Choose one answer. You can try again.</p>
+          <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false"
+              data-correct="false" data-feedback="That looks beside index.html, not inside the images folder."
+              disabled><span class="answer-letter">A</span><span>src=&quot;cat-shades.png&quot;</span></button><button
+              type="button" class="quiz-option" aria-pressed="false" data-correct="false"
+              data-feedback="That names only the folder. Add the filename too." disabled><span
+                class="answer-letter">B</span><span>src=&quot;images&quot;</span></button><button type="button"
+              class="quiz-option" aria-pressed="false" data-correct="true"
+              data-feedback="Correct. The path names the folder, then the file inside it." disabled><span
+                class="answer-letter">C</span><span>src=&quot;images/cat-shades.png&quot;</span></button></div>
+          <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
+            <p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p>
+            <details>
+              <summary>Answer and explanation</summary>
+              <p>src=&quot;images/cat-shades.png&quot;. The path names the folder, then the file inside it.</p>
+            </details>
+          </noscript>
+        </fieldset>
+      </section>
+      <section class="debug-check" id="debug-2">
+        <p class="kicker">Spot the error</p>
+        <h2>Why is this link not appearing as expected?</h2>
+        <p>The link should say “Contact” and open contact.html. One quote mark is missing.</p>
+        <p class="code-title">Broken example — find the mistake</p>
+        <pre tabindex="0" aria-label="Broken code to inspect"><code>&lt;a href=&quot;contact.html&gt;Contact&lt;/a&gt;</code></pre>
+        <details>
+          <summary>Need a hint?</summary>
+          <p>Attribute values have a quote on each side: name=&quot;value&quot;.</p>
+        </details>
+        <fieldset class="quiz">
+          <legend>Which edit fixes the attribute?</legend>
+          <p class="small">Choose the fix. If it is not right, read the clue and try again.</p>
+          <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false"
+              data-correct="false" data-feedback="href is an attribute, not an element. It has no closing tag."
+              disabled><span class="answer-letter">A</span><span>Add &lt;/href&gt; at the end</span></button><button
+              type="button" class="quiz-option" aria-pressed="false" data-correct="false"
+              data-feedback="Without href, the link has no destination." disabled><span
+                class="answer-letter">B</span><span>Remove href completely</span></button><button type="button"
+              class="quiz-option" aria-pressed="false" data-correct="true"
+              data-feedback="Correct. The value needs its closing quote before the &gt; that ends the opening tag."
+              disabled><span class="answer-letter">C</span><span>Add a closing quote after
+                contact.html</span></button></div>
+          <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
+            <p>Clickable answers need JavaScript. Use the hint and open the worked fix below to check your answer.</p>
+          </noscript>
+        </fieldset>
+        <details class="debug-solution">
+          <summary>Show the corrected code and explanation</summary>
+          <pre tabindex="0" aria-label="Corrected code"><code>&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;</code></pre>
+          <p>The quotes now surround only contact.html. The &gt; ends the opening tag, and Contact is the link text.
+          </p>
+        </details>
+        <p class="small"><strong>Try the fix</strong> in your practice file. Save and check the preview.</p>
+      </section>
+      <nav class="pager" aria-label="Lesson navigation"><a href="01-first-page.html">← Previous lesson</a><a
+          href="03-semantic-pages.html">Next lesson →</a></nav>
+    </main>
+  </div>
+  <footer>Build a little. Check it. Make it your own. • Works offline; further-reading links need internet.</footer>
+</body>
+
+</html>

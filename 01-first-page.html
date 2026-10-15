@@ -16,14 +16,15 @@
   <div class="shell">
     <nav class="lesson-nav" aria-label="Tutorial lessons"><a href="project_tutorial.html">Start here</a>
       <details class="lesson-menu" open>
-        <summary>Browse the six lessons</summary>
+        <summary>Browse the seven lessons</summary>
         <ol>
           <li><a href="01-first-page.html" aria-current="page">Your first HTML page</a></li>
           <li><a href="02-elements-attributes.html">Elements and attributes</a></li>
           <li><a href="03-semantic-pages.html">Pages with meaning</a></li>
           <li><a href="04-css-basics.html">Style with CSS</a></li>
           <li><a href="05-responsive-layout.html">Responsive layouts</a></li>
-          <li><a href="06-forms-testing.html">Forms and project checks</a></li>
+          <li><a href="06-forms.html">Forms and validation</a></li>
+          <li><a href="07-testing-publishing.html">Test and publish</a></li>
         </ol>
         <p><a href="example/index.html">View the reference site</a></p>
       </details>
@@ -32,59 +33,162 @@
       <div class="lesson-badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18" />
-        </svg><span>Step 1 of 6</span><span class="badge-topic">Create</span></div>
+        </svg><span>Step 1 of 7</span><span class="badge-topic">Create</span></div>
       <h1>Your first HTML page</h1>
       <p class="intro">By the end, you will have a real HTML file that opens in a browser.</p>
-      <figure class="lesson-visual"><img src="assets/from-code-to-page.svg" width="1000" height="390"
-          alt="Edit and save HTML in your code editor, then refresh the browser to see the result."></figure>
+
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 322" role="img" aria-labelledby="hero-title">
+          <title id="hero-title">Write HTML in the code editor, save it, and see the page in the browser. Then edit, save
+            and reload again.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <text x="190" y="28" text-anchor="middle" font-size="21" font-weight="700" fill="#3150a1">Code view (VS Code)</text>
+          <text x="600" y="28" text-anchor="middle" font-size="21" font-weight="700" fill="#00665f">Browser preview</text>
+          <rect x="10" y="40" width="360" height="200" rx="12" fill="#162b38" />
+          <path d="M10 76V52a12 12 0 0 1 12-12h336a12 12 0 0 1 12 12v24Z" fill="#2a4456" />
+          <text x="28" y="65" font-size="18" font-weight="700" fill="#effaf8">index.html</text>
+          <text class="mono" x="28" y="134" font-size="20" fill="#8fe0d0">&lt;h1&gt;Alex Rivers&lt;/h1&gt;</text>
+          <text class="mono" x="28" y="176" font-size="20" fill="#effaf8">&lt;p&gt;Alex is a musician.&lt;/p&gt;</text>
+          <line x1="378" y1="140" x2="434" y2="140" stroke="#00665f" stroke-width="4" />
+          <polygon points="432,128 450,140 432,152" fill="#00665f" />
+          <text x="410" y="120" text-anchor="middle" font-size="21" font-weight="700" fill="#00665f">Save</text>
+          <rect x="456" y="40" width="294" height="200" rx="12" fill="#ffffff" stroke="#182b3a" stroke-width="2" />
+          <path d="M457 76V52a11 11 0 0 1 11-11h272a11 11 0 0 1 11 11v24Z" fill="#e4f3ed" />
+          <circle cx="474" cy="58" r="5" fill="#91475d" />
+          <circle cx="490" cy="58" r="5" fill="#925000" />
+          <circle cx="506" cy="58" r="5" fill="#00665f" />
+          <rect x="522" y="47" width="208" height="24" rx="12" fill="#fff" stroke="#c8d4d4" />
+          <text x="534" y="64" font-size="16" fill="#182b3a">index.html</text>
+          <text x="474" y="136" font-size="36" font-weight="700" fill="#182b3a">Alex Rivers</text>
+          <text x="474" y="176" font-size="20" fill="#182b3a">Alex is a musician.</text>
+          <path class="axis-anim" d="M603 252V282H190V256" fill="none" stroke="#925000" stroke-width="3" />
+          <polygon points="177,262 190,244 203,262" fill="#925000" />
+          <text x="396" y="312" text-anchor="middle" font-size="21" font-weight="700" fill="#925000">Edit, save, reload. Repeat.</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 400" role="img" aria-labelledby="hero-title-n">
+          <title id="hero-title-n">Write HTML in the code editor, save it, and see the page in the browser. Then edit,
+            save and reload again.</title>
+          <text x="180" y="20" text-anchor="middle" font-size="17" font-weight="700" fill="#3150a1">Code view (VS Code)</text>
+          <rect x="20" y="30" width="320" height="112" rx="10" fill="#162b38" />
+          <path d="M20 60V40a10 10 0 0 1 10-10h300a10 10 0 0 1 10 10v20Z" fill="#2a4456" />
+          <text x="34" y="51" font-size="15" font-weight="700" fill="#effaf8">index.html</text>
+          <text class="mono" x="34" y="92" font-size="16" fill="#8fe0d0">&lt;h1&gt;Alex Rivers&lt;/h1&gt;</text>
+          <text class="mono" x="34" y="124" font-size="16" fill="#effaf8">&lt;p&gt;Alex is a musician.&lt;/p&gt;</text>
+          <line x1="180" y1="150" x2="180" y2="184" stroke="#00665f" stroke-width="4" />
+          <polygon points="169,182 180,200 191,182" fill="#00665f" />
+          <text x="204" y="178" font-size="17" font-weight="700" fill="#00665f">Save</text>
+          <text x="180" y="224" text-anchor="middle" font-size="17" font-weight="700" fill="#00665f">Browser preview</text>
+          <rect x="20" y="234" width="320" height="120" rx="10" fill="#ffffff" stroke="#182b3a" stroke-width="2" />
+          <path d="M21 262V245a10 10 0 0 1 10-10h298a10 10 0 0 1 10 10v17Z" fill="#e4f3ed" />
+          <circle cx="38" cy="248" r="5" fill="#91475d" />
+          <circle cx="54" cy="248" r="5" fill="#925000" />
+          <circle cx="70" cy="248" r="5" fill="#00665f" />
+          <text x="36" y="302" font-size="30" font-weight="700" fill="#182b3a">Alex Rivers</text>
+          <text x="36" y="336" font-size="17" fill="#182b3a">Alex is a musician.</text>
+          <text x="180" y="386" text-anchor="middle" font-size="17" font-weight="700" fill="#925000">↺ Edit, save, reload. Repeat.</text>
+        </svg>
+        <figcaption>You edit the code. The browser shows the result.</figcaption>
+      </figure>
+
       <h2>1. What is a web page?</h2>
-      <p>You have used web pages to read information, watch videos or buy things. Now you will make a simple one. A web
-        page can start as an ordinary text file containing words and instructions about what those words mean.</p>
-      <p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>. You do not need to memorise the
-        full name. “Markup” means labelling content: this is a heading, this is a paragraph, this is a link. Your
-        browser reads those labels and displays the page.</p>
-      <p>In a Word document you might select text and choose a heading style. In HTML, you place a heading tag before
-        the text and a closing tag after it. You will practise that below. There is no need to make the whole website
-        today.</p>
-      <div class="panel">
-        <h2>Two views of the same page</h2>
-        <p><strong>Code view:</strong> where you type HTML in VS Code.<br><strong>Browser preview:</strong> where you
-          see what a visitor would see.</p>
-        <p>They show the same file in different ways. Change the code, save it and check the preview. You edit the words
-          in the code, not by typing over the browser page.</p>
+      <p><strong>HTML</strong> (HyperText Markup Language) adds labels to plain text: this is a heading, this is a
+        paragraph. The browser reads the labels and shows the page.</p>
+      <div class="compare">
+        <pre tabindex="0" aria-label="HTML code view"><code>&lt;h1&gt;Alex Rivers&lt;/h1&gt;
+&lt;p&gt;Alex makes indie music.&lt;/p&gt;</code></pre>
+        <div class="result text-preview">
+          <p class="preview-h1">Alex Rivers</p>
+          <p>Alex makes indie music.</p>
+        </div>
       </div>
-      <p>Later, <strong>CSS</strong> will control colours, spacing and layout. <strong>JavaScript</strong> can add
-        behaviour. For now, concentrate on HTML and getting a heading and paragraph onto the screen.</p>
       <aside class="why-panel">
-        <h2>Why learn to write HTML yourself?</h2>
-        <p>If a heading is wrong or a paragraph is missing, understanding the code lets you find and fix it. You can
-          make choices for your client instead of depending on a template or someone else’s changes.</p>
-        <p>Headings also help visitors scan a page. A fan looking for the latest release can spot “Latest news” quickly;
-          short paragraphs make the details easier to read. People using a screen reader can use properly marked
-          headings to move through the page.</p>
+        <p><strong>Why write HTML yourself?</strong> You can fix mistakes and make your own choices. Proper headings
+          also help screen reader users move around a page.</p>
       </aside>
+
       <h2>2. Set up your work area</h2>
-      <ol>
-        <li>Find your <strong>college OneDrive</strong> folder. Open <strong>L2 Digital → Web Development</strong>. This
-          is your project work area; create Web Development there if it does not exist.</li>
-        <li>Inside Web Development, create a folder called <code>website</code>. Keep your website code and images here.
-          Your assignment document and slides can stay outside this folder, in Web Development.</li>
-        <li>Open VS Code. Choose <strong>File → Open Folder</strong> and select that <code>website</code> folder.</li>
-        <li>In VS Code’s Explorer panel, choose <strong>New File</strong> and name it <code>index.html</code>. The
-          <code>.html</code> ending tells the software this is an HTML file. Check you have not added <code>.txt</code>
-          at the end.</li>
-        <li>Copy the complete starter below into the empty file. Save with <strong>Ctrl+S</strong> (Windows) or
-          <strong>Cmd+S</strong> (Mac).</li>
-        <li>Right-click <code>index.html</code> in VS Code’s Explorer panel or its editor tab, then choose <strong>Open
-            in Integrated Browser</strong>. You can also use the editor’s <strong>Show Preview</strong> icon.</li>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 266" role="img" aria-labelledby="tree-title">
+          <title id="tree-title">Folder tree: OneDrive, then L2 Digital, then Web Development. Inside Web Development
+            are the website folder, which holds index.html, and your assignment and slides.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <defs>
+            <symbol id="ic-folder" viewBox="0 0 28 22">
+              <path d="M1 3h9l3 3h14v15H1z" fill="#fff2d7" stroke="#925000" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="ic-file" viewBox="0 0 22 28">
+              <path d="M2 1h12l6 6v20H2z" fill="#ffffff" stroke="#3150a1" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+          </defs>
+          <use href="#ic-folder" x="10" y="10" width="34" height="27" />
+          <text x="54" y="33" font-size="24" fill="#182b3a">OneDrive (college)</text>
+          <use href="#ic-folder" x="46" y="52" width="34" height="27" />
+          <text x="90" y="75" font-size="24" fill="#182b3a">L2 Digital</text>
+          <use href="#ic-folder" x="82" y="94" width="34" height="27" />
+          <text x="126" y="117" font-size="24" fill="#182b3a">Web Development</text>
+          <rect x="114" y="130" width="250" height="40" rx="8" fill="#e4f3ed" stroke="#00665f" stroke-width="2" />
+          <use href="#ic-folder" x="122" y="137" width="34" height="27" />
+          <text x="166" y="160" font-size="24" font-weight="700" fill="#00665f">website</text>
+          <use href="#ic-file" x="158" y="180" width="24" height="30" />
+          <text class="mono" x="194" y="203" font-size="23" fill="#182b3a">index.html</text>
+          <use href="#ic-file" x="122" y="222" width="24" height="30" />
+          <text x="158" y="245" font-size="24" fill="#182b3a">Assignment + slides</text>
+          <text x="440" y="160" font-size="22" font-weight="700" fill="#00665f">← Your site lives here</text>
+          <text x="440" y="203" font-size="22" font-weight="700" fill="#3150a1">← Your first page</text>
+          <text x="440" y="245" font-size="22" font-weight="700" fill="#925000">← Stays outside website</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 250" role="img" aria-labelledby="tree-title-n">
+          <title id="tree-title-n">Folder tree: OneDrive, then L2 Digital, then Web Development. Inside Web Development
+            are the website folder, which holds index.html, and your assignment and slides.</title>
+          <defs>
+            <symbol id="ic-folder-n" viewBox="0 0 28 22">
+              <path d="M1 3h9l3 3h14v15H1z" fill="#fff2d7" stroke="#925000" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+            <symbol id="ic-file-n" viewBox="0 0 22 28">
+              <path d="M2 1h12l6 6v20H2z" fill="#ffffff" stroke="#3150a1" stroke-width="2" stroke-linejoin="round" />
+            </symbol>
+          </defs>
+          <use href="#ic-folder-n" x="6" y="10" width="26" height="20" />
+          <text x="38" y="27" font-size="17" fill="#182b3a">OneDrive (college)</text>
+          <use href="#ic-folder-n" x="24" y="50" width="26" height="20" />
+          <text x="56" y="67" font-size="17" fill="#182b3a">L2 Digital</text>
+          <use href="#ic-folder-n" x="42" y="90" width="26" height="20" />
+          <text x="74" y="107" font-size="17" fill="#182b3a">Web Development</text>
+          <rect x="56" y="125" width="140" height="34" rx="7" fill="#e4f3ed" stroke="#00665f" stroke-width="2" />
+          <use href="#ic-folder-n" x="62" y="132" width="26" height="20" />
+          <text x="94" y="149" font-size="17" font-weight="700" fill="#00665f">website</text>
+          <text x="206" y="149" font-size="16" font-weight="700" fill="#00665f">← your site</text>
+          <use href="#ic-file-n" x="80" y="172" width="20" height="25" />
+          <text class="mono" x="108" y="190" font-size="16" fill="#182b3a">index.html</text>
+          <text x="214" y="190" font-size="16" font-weight="700" fill="#3150a1">← first page</text>
+          <use href="#ic-file-n" x="62" y="212" width="20" height="25" />
+          <text x="90" y="230" font-size="16" fill="#182b3a">Assignment + slides</text>
+          <text x="266" y="230" font-size="16" font-weight="700" fill="#925000">← outside</text>
+        </svg>
+        <figcaption>Keep all your website files inside one <code>website</code> folder.</figcaption>
+      </figure>
+      <ol class="flow">
+        <li><strong>Find OneDrive</strong><span>Open L2 Digital → Web Development. Create it if missing.</span></li>
+        <li><strong>Make a folder</strong><span>Inside Web Development, create <code>website</code>.</span></li>
+        <li><strong>Open in VS Code</strong><span>File → Open Folder → <code>website</code>.</span></li>
       </ol>
-      <p>The preview can update while you edit. Save your work even when you can already see a change. If the preview
-        looks old, save and click its Reload button. If the preview command is missing, ask your tutor to check your VS
-        Code version; an external browser can also display the file. See <a
-          href="https://code.visualstudio.com/docs/languages/html#_preview-html-files-in-the-integrated-browser">VS
-          Code’s HTML preview instructions</a>.</p>
-      <p>Copying the starter is just setup. You will understand it by changing small parts. Leave the lines in
-        <code>head</code> alone for now.</p>
+      <ol class="flow" style="counter-reset: flow 3">
+        <li><strong>New file</strong><span>In Explorer, choose New File. Name it <code>index.html</code>, not
+            <code>.txt</code>.</span></li>
+        <li><strong>Paste and save</strong><span>Copy the starter below. Press Ctrl+S (Windows) or Cmd+S (Mac).</span>
+        </li>
+        <li><strong>Preview</strong><span>Right-click <code>index.html</code> → Open in Integrated Browser.</span>
+        </li>
+      </ol>
+      <p>Preview not changing? Save the file, then press Reload. Check you are viewing the file you edited.</p>
       <p class="code-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="m9 7-5 5 5 5m6-10 5 5-5 5m-2-14-2 18" />
@@ -101,133 +205,215 @@
   &lt;p&gt;Alex is a fictional musician who makes upbeat indie music.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-      <h2>3. Get comfortable with one heading</h2>
-      <p>Find this line in your code. The angle brackets are part of HTML; the words between them are your content.</p>
-      <p class="code-title">A main heading</p>
-      <pre tabindex="0" aria-label="A main heading"><code>&lt;h1&gt;Alex Rivers&lt;/h1&gt;</code></pre>
-      <p>Read it as “start the main heading — Alex Rivers — end the heading”. <code>&lt;h1&gt;</code> starts it.
-        <code>&lt;/h1&gt;</code> ends it. The slash <code>/</code> marks the closing tag. The tags normally do not
-        appear as text in the preview.</p>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 470" role="img" aria-labelledby="skeleton-title">
+          <title id="skeleton-title">Page structure: the html element wraps everything. Inside it, the head holds page
+            information such as the title, and the body holds the headings and paragraphs visitors see.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <rect x="10" y="6" width="230" height="38" rx="7" fill="#e4f3ed" stroke="#00665f" />
+          <text class="mono" x="22" y="32" font-size="20" fill="#182b3a">&lt;!doctype html&gt;</text>
+          <text x="256" y="32" font-size="19" fill="#42596a">Use modern HTML</text>
+          <rect x="10" y="56" width="740" height="404" rx="12" fill="#ffffff" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="28" y="92" font-size="22" font-weight="700" fill="#00665f">&lt;html lang="en-GB"&gt;</text>
+          <text x="730" y="92" text-anchor="end" font-size="19" fill="#42596a">Wraps the whole page</text>
+          <rect x="30" y="108" width="700" height="172" rx="10" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <text class="mono" x="46" y="138" font-size="22" font-weight="700" fill="#925000">&lt;head&gt;</text>
+          <text x="150" y="138" font-size="19" fill="#182b3a">Page information. Not shown on the page.</text>
+          <rect x="46" y="150" width="430" height="34" rx="6" fill="#fff" stroke="#925000" />
+          <text class="mono" x="58" y="175" font-size="20" fill="#182b3a">&lt;meta charset="utf-8"&gt;</text>
+          <text x="490" y="175" font-size="19" fill="#42596a">← Symbols like £</text>
+          <rect x="46" y="190" width="430" height="34" rx="6" fill="#fff" stroke="#925000" />
+          <text class="mono" x="58" y="215" font-size="20" fill="#182b3a">&lt;meta name="viewport" …&gt;</text>
+          <text x="490" y="215" font-size="19" fill="#42596a">← Phone screens</text>
+          <rect x="46" y="230" width="430" height="34" rx="6" fill="#fff" stroke="#925000" stroke-width="3" />
+          <text class="mono" x="58" y="255" font-size="20" fill="#182b3a">&lt;title&gt;Alex Rivers | Home&lt;/title&gt;</text>
+          <text x="490" y="255" font-size="19" font-weight="700" fill="#925000">← Browser tab text</text>
+          <rect x="30" y="292" width="700" height="150" rx="10" fill="#eaf0ff" stroke="#3150a1" stroke-width="2" />
+          <text class="mono" x="46" y="322" font-size="22" font-weight="700" fill="#3150a1">&lt;body&gt;</text>
+          <text x="150" y="322" font-size="19" fill="#182b3a">What visitors see on the page.</text>
+          <rect x="46" y="334" width="430" height="34" rx="6" fill="#fff" stroke="#3150a1" stroke-width="3" />
+          <text class="mono" x="58" y="359" font-size="20" fill="#182b3a">&lt;h1&gt;Alex Rivers&lt;/h1&gt;</text>
+          <text x="490" y="359" font-size="19" font-weight="700" fill="#3150a1">← Main heading</text>
+          <rect x="46" y="374" width="430" height="34" rx="6" fill="#fff" stroke="#3150a1" stroke-width="3" />
+          <text class="mono" x="58" y="399" font-size="20" fill="#182b3a">&lt;p&gt;Alex is a fictional…&lt;/p&gt;</text>
+          <text x="490" y="399" font-size="19" font-weight="700" fill="#3150a1">← Paragraph</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 448" role="img" aria-labelledby="skeleton-title-n">
+          <title id="skeleton-title-n">Page structure: the html element wraps everything. Inside it, the head holds page
+            information such as the title, and the body holds the headings and paragraphs visitors see.</title>
+          <rect x="6" y="4" width="180" height="30" rx="6" fill="#e4f3ed" stroke="#00665f" />
+          <text class="mono" x="16" y="24" font-size="15" fill="#182b3a">&lt;!doctype html&gt;</text>
+          <rect x="6" y="42" width="348" height="396" rx="12" fill="#ffffff" stroke="#00665f" stroke-width="3" />
+          <text class="mono" x="18" y="66" font-size="16" font-weight="700" fill="#00665f">&lt;html lang="en-GB"&gt;</text>
+          <rect x="16" y="78" width="328" height="188" rx="10" fill="#fff2d7" stroke="#925000" stroke-width="2" />
+          <text class="mono" x="28" y="100" font-size="16" font-weight="700" fill="#925000">&lt;head&gt;</text>
+          <text x="28" y="120" font-size="15" fill="#182b3a">Not shown on the page</text>
+          <rect x="26" y="130" width="308" height="30" rx="6" fill="#fff" stroke="#925000" />
+          <text class="mono" x="34" y="150" font-size="15" fill="#182b3a">&lt;meta charset="utf-8"&gt;</text>
+          <rect x="26" y="168" width="308" height="30" rx="6" fill="#fff" stroke="#925000" />
+          <text class="mono" x="34" y="188" font-size="15" fill="#182b3a">&lt;meta name="viewport" …&gt;</text>
+          <rect x="26" y="206" width="308" height="30" rx="6" fill="#fff" stroke="#925000" stroke-width="3" />
+          <text class="mono" x="34" y="226" font-size="15" fill="#182b3a">&lt;title&gt;Alex Rivers | Home&lt;/title&gt;</text>
+          <text x="28" y="256" font-size="15" font-weight="700" fill="#925000">Title = text on the browser tab</text>
+          <rect x="16" y="278" width="328" height="152" rx="10" fill="#eaf0ff" stroke="#3150a1" stroke-width="2" />
+          <text class="mono" x="28" y="300" font-size="16" font-weight="700" fill="#3150a1">&lt;body&gt;</text>
+          <text x="28" y="320" font-size="15" fill="#182b3a">What visitors see</text>
+          <rect x="26" y="330" width="308" height="30" rx="6" fill="#fff" stroke="#3150a1" stroke-width="3" />
+          <text class="mono" x="34" y="350" font-size="15" fill="#182b3a">&lt;h1&gt;Alex Rivers&lt;/h1&gt;</text>
+          <rect x="26" y="368" width="308" height="30" rx="6" fill="#fff" stroke="#3150a1" stroke-width="3" />
+          <text class="mono" x="34" y="388" font-size="15" fill="#182b3a">&lt;p&gt;Alex is a fictional…&lt;/p&gt;</text>
+          <text x="28" y="420" font-size="15" font-weight="700" fill="#3150a1">Headings and paragraphs go here</text>
+        </svg>
+        <figcaption>Copying the starter is just set-up. Leave the <code>head</code> alone for now.</figcaption>
+      </figure>
+
+      <h2>3. Change one heading</h2>
+      <figure class="fig">
+        <svg class="wide" viewBox="0 0 760 206" role="img" aria-labelledby="anatomy-title">
+          <title id="anatomy-title">The code h1 Alex Rivers, with the opening tag, the content and the closing tag
+            labelled. Together they make one element.</title>
+          <style>
+            .fig svg text.mono {
+              font-family: ui-monospace, Consolas, "Courier New", monospace;
+            }
+          </style>
+          <text x="380" y="34" text-anchor="middle" font-size="24" font-weight="700" fill="#182b3a">One element</text>
+          <path d="M92 56V46H668V56" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <text class="mono" x="92" y="110" font-size="48" fill="#00665f" textLength="115"
+            lengthAdjust="spacingAndGlyphs">&lt;h1&gt;</text>
+          <text class="mono" x="207" y="110" font-size="48" fill="#182b3a" textLength="317"
+            lengthAdjust="spacingAndGlyphs">Alex Rivers</text>
+          <text class="mono" x="524" y="110" font-size="48" fill="#925000" textLength="144"
+            lengthAdjust="spacingAndGlyphs">&lt;/h1&gt;</text>
+          <path d="M92 126V136H205V126" fill="none" stroke="#00665f" stroke-width="2.5" />
+          <path d="M209 126V136H522V126" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <path d="M526 126V136H668V126" fill="none" stroke="#925000" stroke-width="2.5" />
+          <text x="148" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#00665f">Opening tag</text>
+          <text x="148" y="194" text-anchor="middle" font-size="21" fill="#182b3a">Starts it</text>
+          <text x="365" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#182b3a">Content</text>
+          <text x="365" y="194" text-anchor="middle" font-size="21" fill="#182b3a">The words you change</text>
+          <text x="597" y="166" text-anchor="middle" font-size="24" font-weight="700" fill="#925000">Closing tag</text>
+          <text x="597" y="194" text-anchor="middle" font-size="21" fill="#182b3a">The / ends it</text>
+        </svg>
+        <svg class="narrow" viewBox="0 0 360 200" role="img" aria-labelledby="anatomy-title-n">
+          <title id="anatomy-title-n">The code h1 Alex Rivers, with the opening tag, the content and the closing tag
+            labelled. Together they make one element.</title>
+          <text x="180" y="20" text-anchor="middle" font-size="17" font-weight="700" fill="#182b3a">One element</text>
+          <path d="M48 36V28H312V36" fill="none" stroke="#182b3a" stroke-width="2.5" />
+          <text class="mono" x="48" y="70" font-size="22" fill="#00665f" textLength="53"
+            lengthAdjust="spacingAndGlyphs">&lt;h1&gt;</text>
+          <text class="mono" x="101" y="70" font-size="22" fill="#182b3a" textLength="145"
+            lengthAdjust="spacingAndGlyphs">Alex Rivers</text>
+          <text class="mono" x="246" y="70" font-size="22" fill="#925000" textLength="66"
+            lengthAdjust="spacingAndGlyphs">&lt;/h1&gt;</text>
+          <path d="M48 82H99" stroke="#00665f" stroke-width="4" />
+          <path d="M103 82H244" stroke="#182b3a" stroke-width="4" />
+          <path d="M248 82H312" stroke="#925000" stroke-width="4" />
+          <rect x="24" y="110" width="16" height="16" fill="#00665f" />
+          <text x="50" y="124" font-size="17" fill="#182b3a"><tspan font-weight="700">Opening tag:</tspan> starts it</text>
+          <rect x="24" y="142" width="16" height="16" fill="#182b3a" />
+          <text x="50" y="156" font-size="17" fill="#182b3a"><tspan font-weight="700">Content:</tspan> the words you change</text>
+          <rect x="24" y="174" width="16" height="16" fill="#925000" />
+          <text x="50" y="188" font-size="17" fill="#182b3a"><tspan font-weight="700">Closing tag:</tspan> the / ends it</text>
+        </svg>
+        <figcaption>Change the content. Keep both tags.</figcaption>
+      </figure>
       <ol>
-        <li>Select only the words <code>Alex Rivers</code> between the tags.</li>
-        <li>Type another practice name. Keep both tags.</li>
-        <li>Save and look at the preview. The large heading should change.</li>
-        <li>Change it back if you want to follow Alex’s example.</li>
+        <li>Select only <code>Alex Rivers</code> and type another name.</li>
+        <li>Save. The large heading in the preview should change.</li>
+        <li>Made a mistake? Press Ctrl+Z (Windows) or Cmd+Z (Mac). VS Code may add a closing tag for you, so check
+          before adding another.</li>
       </ol>
-      <p>If you make a mistake, use Ctrl+Z (Windows) or Cmd+Z (Mac) to undo. VS Code may add a closing tag for you while
-        typing: check before adding another one.</p>
-      <h2>4. Add a paragraph, then another</h2>
-      <p>A paragraph is a block of ordinary text. Each paragraph has its own <code>&lt;p&gt;</code> and
-        <code>&lt;/p&gt;</code>. Find the existing paragraph and change its words. Then add a new line underneath it,
-        before <code>&lt;/body&gt;</code>:</p>
-      <p class="code-title">Two separate paragraphs</p>
-      <pre tabindex="0" aria-label="Two separate paragraphs"><code>&lt;p&gt;Alex is a fictional musician who makes upbeat indie music.&lt;/p&gt;
-&lt;p&gt;The new album is called Morning Light.&lt;/p&gt;</code></pre>
-      <p>Save and check: you should see two separate blocks of text. Pressing Enter within a paragraph in your code does
-        not normally create a new paragraph in the browser. The <code>p</code> elements do that job.</p>
-      <h3>Add a smaller section heading</h3>
-      <p>Put this below your two paragraphs, still inside <code>body</code>:</p>
-      <p class="code-title">A section heading followed by a paragraph</p>
-      <pre tabindex="0" aria-label="A section heading followed by a paragraph"><code>&lt;h2&gt;Latest news&lt;/h2&gt;
-&lt;p&gt;Alex is preparing a new live show.&lt;/p&gt;</code></pre>
-      <p><code>h1</code> is the main page heading. <code>h2</code> introduces a section within that page. Use headings
-        to organise ideas, and paragraphs for the information underneath.</p>
-      <div class="example">
-        <h3>What the browser should roughly show</h3>
-        <div class="text-preview">
-          <p class="preview-h1">Alex Rivers</p>
-          <p>Alex is a fictional musician who makes upbeat indie music.</p>
-          <p>The new album is called Morning Light.</p>
-          <p class="preview-h2">Latest news</p>
-          <p>Alex is preparing a new live show.</p>
+
+      <h2>4. Paragraphs and section headings</h2>
+      <p><code>h1</code> is the main heading. <code>h2</code> is a section heading. Each paragraph needs its own
+        <code>p</code>.</p>
+      <section class="live" data-live>
+        <h3>Try it: edit the code</h3>
+        <div class="live-grid">
+          <div>
+            <p class="live-label">Edit the code</p>
+            <textarea spellcheck="false" aria-label="Code you can edit">&lt;h1&gt;Alex Rivers&lt;/h1&gt;
+&lt;p&gt;Alex is a fictional musician who makes upbeat indie music.&lt;/p&gt;
+&lt;p&gt;The new album is called Morning Light.&lt;/p&gt;
+&lt;h2&gt;Latest news&lt;/h2&gt;
+&lt;p&gt;Alex is preparing a new live show.&lt;/p&gt;</textarea>
+          </div>
+          <div>
+            <p class="live-label">Result</p>
+            <iframe title="Live result" sandbox></iframe>
+          </div>
         </div>
-        <p class="small">Your browser’s default font may look different. Check the order and separation of the content.
-        </p>
-      </div>
-      <details>
-        <summary>What do the other starter lines do?</summary>
-        <ul>
-          <li><code>&lt;!doctype html&gt;</code> tells the browser to use modern HTML.</li>
-          <li><code>&lt;html lang="en-GB"&gt;</code> wraps the document and identifies its language.</li>
-          <li><code>&lt;head&gt;</code> contains information about the page. It is different from the visible
-            <code>&lt;header&gt;</code> you will meet later.</li>
-          <li><code>charset="utf-8"</code> supports characters such as £.</li>
-          <li>The <code>viewport</code> line helps the page use a mobile screen’s width.</li>
-          <li><code>&lt;title&gt;</code> sets the browser-tab title.</li>
-          <li><code>&lt;body&gt;</code> contains the visible content. Here, <code>h1</code> is the main heading and
-            <code>p</code> is a paragraph.</li>
-        </ul>
-      </details>
+        <p>Add a paragraph. Press Enter inside one: nothing changes. Only a new <code>&lt;p&gt;</code> starts a new
+          paragraph.</p>
+        <p><button type="button" data-reset>Reset</button></p>
+      </section>
+
       <section class="task">
         <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="m13 2-9 12h7l-1 8 10-13h-8Z" />
           </svg>Try it</h2>
         <ol>
-          <li>Change the heading to a practice client’s name.</li>
-          <li>Change the first introduction paragraph to explain who they are.</li>
-          <li>Change the tab title too. Save and check the integrated browser preview.</li>
+          <li>In <code>index.html</code>, change the heading and first paragraph to a practice client’s.</li>
+          <li>Add these lines inside <code>body</code>, before <code>&lt;/body&gt;</code>.</li>
+          <li>Change the <code>title</code> too. Save and check the preview.</li>
         </ol>
-        <p><strong>Expected result:</strong> one main heading, two introduction paragraphs, a smaller “Latest news”
-          heading and its paragraph. Your chosen title should appear on the browser tab. Plain styling is normal at this
-          stage.</p>
+        <pre tabindex="0" aria-label="Lines to add to the body"><code>&lt;p&gt;The new album is called Morning Light.&lt;/p&gt;
+&lt;h2&gt;Latest news&lt;/h2&gt;
+&lt;p&gt;Alex is preparing a new live show.&lt;/p&gt;</code></pre>
+        <p><strong>Expected result:</strong> one main heading, two paragraphs, a “Latest news” heading with its
+          paragraph, and your title on the browser tab. Plain styling is normal.</p>
       </section>
-      <section class="check">
+
+      <p><strong>Project:</strong> create your own home page with a short client introduction. Keep a screenshot and a
+        note on what HTML does (section 4.1).</p>
+
+      <section class="recap">
+        <h2>Remember</h2>
+        <p>HTML labels content with tags. Most elements have an opening tag, content and a closing tag. Save, then
+          check the preview.</p>
+      </section>
+
+      <aside class="more">
         <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 18h6m-5 3h4M8 15a7 7 0 1 1 8 0l-1 3H9Z" />
-          </svg>Check your understanding</h2>
-        <details>
-          <summary>Which part changes the browser tab, rather than the large page heading?</summary>
-          <p>The <code>title</code> element changes the tab. The <code>h1</code> element changes the visible main
-            heading.</p>
-        </details>
-        <details>
-          <summary>My changes do not appear. What should I check?</summary>
-          <p>Save the file, use the preview’s Reload button, then check that the preview shows the same file you edited.
-            Check its folder and filename.</p>
-        </details>
-      </section>
-      <h2>Apply it to your project</h2>
-      <p>Create your own home page with a meaningful introduction to the client. Keep a screenshot and a short note
-        about what HTML does for section 4.1.</p>
-      <details>
-        <summary>Ready for a little more?</summary>
-        <p>Add a second <code>h2</code> section called “About the music”, with a paragraph beneath it. Explain how a
-          visitor can tell which paragraph belongs to each heading.</p>
-      </details>
-      <section>
-        <h2 class="reading-title"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 6v15M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z" />
-          </svg>Explore on W3Schools</h2>
-        <p>Open a topic and try its “Try it Yourself” example. Change one value and explain the result. Use your
-          browser’s Back button to return here.</p>
+          </svg>Want more? W3Schools</h2>
         <ul>
           <li><a href="https://www.w3schools.com/html/html_basic.asp">HTML basics</a></li>
           <li><a href="https://www.w3schools.com/html/html_elements.asp">HTML elements</a></li>
+          <li><a href="https://www.w3schools.com/html/html_headings.asp">HTML headings</a></li>
+          <li><a href="https://www.w3schools.com/html/html_paragraphs.asp">HTML paragraphs</a></li>
+          <li><a href="https://code.visualstudio.com/docs/languages/html#_preview-html-files-in-the-integrated-browser">VS
+              Code’s HTML preview instructions</a></li>
         </ul>
-      </section>
+      </aside>
+
       <section class="understanding">
         <h2>Pause and check</h2>
-        <p>Make a prediction before clicking. Read the feedback, then try a similar change in your own page.</p>
+        <p>Predict first, then click. Try the idea in your own page.</p>
         <fieldset class="quiz" id="quiz-1-1">
           <legend>Which line creates a paragraph?</legend>
           <p class="small">Choose one answer. You can try again.</p>
           <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="true"
-              data-feedback="Correct. The p element marks a paragraph of ordinary text." disabled><span
+              data-feedback="Correct. The p element marks a paragraph." disabled><span
                 class="answer-letter">A</span><span>&lt;p&gt;Hello, Alex!&lt;/p&gt;</span></button><button type="button"
               class="quiz-option" aria-pressed="false" data-correct="false"
-              data-feedback="That creates the main page heading. Try the tag used for a paragraph." disabled><span
+              data-feedback="That is the main heading. Try the paragraph tag." disabled><span
                 class="answer-letter">B</span><span>&lt;h1&gt;Hello, Alex!&lt;/h1&gt;</span></button><button
               type="button" class="quiz-option" aria-pressed="false" data-correct="false"
-              data-feedback="That changes the browser-tab title, not a paragraph in the page." disabled><span
+              data-feedback="That sets the browser-tab title, not a paragraph." disabled><span
                 class="answer-letter">C</span><span>&lt;title&gt;Hello, Alex!&lt;/title&gt;</span></button></div>
           <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
             <p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p>
             <details>
               <summary>Answer and explanation</summary>
-              <p>&lt;p&gt;Hello, Alex!&lt;/p&gt;. Correct. The p element marks a paragraph of ordinary text.</p>
+              <p>&lt;p&gt;Hello, Alex!&lt;/p&gt;. The p element marks a paragraph.</p>
             </details>
           </noscript>
         </fieldset>
@@ -235,20 +421,19 @@
           <legend>You want to change the words in your main heading. What should you edit?</legend>
           <p class="small">Choose one answer. You can try again.</p>
           <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="true"
-              data-feedback="Correct. Keep the tags and replace the content between them." disabled><span
+              data-feedback="Correct. Keep the tags and change the content between them." disabled><span
                 class="answer-letter">A</span><span>The text between &lt;h1&gt; and &lt;/h1&gt;</span></button><button
               type="button" class="quiz-option" aria-pressed="false" data-correct="false"
-              data-feedback="Renaming the file does not change the heading text inside it." disabled><span
+              data-feedback="The filename does not change the heading text." disabled><span
                 class="answer-letter">B</span><span>The filename index.html</span></button><button type="button"
               class="quiz-option" aria-pressed="false" data-correct="false"
-              data-feedback="The slash is part of the closing tag. Keep it and change the words instead." disabled><span
+              data-feedback="The slash is part of the closing tag. Keep it." disabled><span
                 class="answer-letter">C</span><span>Only the slash in &lt;/h1&gt;</span></button></div>
           <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
             <p>Clickable answers need JavaScript. Think of your answer, then open the explanation below.</p>
             <details>
               <summary>Answer and explanation</summary>
-              <p>The text between &lt;h1&gt; and &lt;/h1&gt;. Correct. Keep the tags and replace the content between
-                them.</p>
+              <p>The text between &lt;h1&gt; and &lt;/h1&gt;. Keep the tags and change the content between them.</p>
             </details>
           </noscript>
         </fieldset>
@@ -256,27 +441,26 @@
       <section class="debug-check" id="debug-1">
         <p class="kicker">Spot the error</p>
         <h2>Why does the paragraph look like part of the heading?</h2>
-        <p>The name should be a main heading and the next sentence should be an ordinary paragraph. A closing tag is
-          missing.</p>
+        <p>A closing tag is missing.</p>
         <p class="code-title">Broken example — find the mistake</p>
         <pre tabindex="0" aria-label="Broken code to inspect"><code>&lt;h1&gt;Alex Rivers
 &lt;p&gt;New album out now.&lt;/p&gt;</code></pre>
         <details>
           <summary>Need a hint?</summary>
-          <p>Match each opening tag to a closing tag with the same name. Which one has no partner?</p>
+          <p>Match each opening tag to a closing tag. Which one has no partner?</p>
         </details>
         <fieldset class="quiz">
           <legend>Is everything OK with these tags? Find the mistake.</legend>
           <p class="small">Choose the fix. If it is not right, read the clue and try again.</p>
           <div class="quiz-options"><button type="button" class="quiz-option" aria-pressed="false" data-correct="false"
-              data-feedback="The name starts with h1, so it needs a matching closing h1 tag." disabled><span
+              data-feedback="The name starts with h1, so it needs a closing h1 tag." disabled><span
                 class="answer-letter">A</span><span>Add &lt;/p&gt; after Alex Rivers</span></button><button
               type="button" class="quiz-option" aria-pressed="false" data-correct="true"
-              data-feedback="Correct. Close the heading after the name, before starting the paragraph. Otherwise the browser can treat the paragraph as content inside the heading."
+              data-feedback="Correct. Close the heading before the paragraph starts."
               disabled><span class="answer-letter">B</span><span>Add &lt;/h1&gt; after Alex
                 Rivers</span></button><button type="button" class="quiz-option" aria-pressed="false"
               data-correct="false"
-              data-feedback="Another opening tag does not close the first heading. Use a closing tag with a slash."
+              data-feedback="Another opening tag does not close the heading. Use a closing tag with a slash."
               disabled><span class="answer-letter">C</span><span>Add another &lt;h1&gt; before the
                 paragraph</span></button></div>
           <p class="quiz-feedback" role="status" aria-live="polite" aria-atomic="true"></p><noscript>
@@ -287,11 +471,10 @@
           <summary>Show the corrected code and explanation</summary>
           <pre tabindex="0" aria-label="Corrected code"><code>&lt;h1&gt;Alex Rivers&lt;/h1&gt;
 &lt;p&gt;New album out now.&lt;/p&gt;</code></pre>
-          <p>Now the heading and paragraph are separate elements. Browsers often try to recover from mistakes, so broken
-            HTML may still display something; check the structure as well as its appearance.</p>
+          <p>Now the heading and paragraph are separate. Browsers often hide broken HTML, so check the structure as
+            well as the look.</p>
         </details>
-        <p class="small"><strong>Try the fix:</strong> Use your practice files to make the correction. Save, check the
-          preview and explain what changed in your own words.</p>
+        <p class="small"><strong>Try the fix</strong> in your practice file. Save and check the preview.</p>
       </section>
       <nav class="pager" aria-label="Lesson navigation"><a href="project_tutorial.html">← Start here</a><a
           href="02-elements-attributes.html">Next lesson →</a></nav>

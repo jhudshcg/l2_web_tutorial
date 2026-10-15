@@ -1,0 +1,13 @@
+/* Print: hide navigation and interactive chrome, keep content readable on paper. */
+@media print {
+  .site-header, .lesson-nav, .pager, footer, .skip { display: none; }
+  .shell { display: block; padding: 0; }
+  body { font-size: 11pt; background: white; }
+  pre { white-space: pre-wrap; color: black; background: #eee; }
+  a { color: black; }
+  .lesson-visual { max-width: 140mm; }
+  .code-title { background: #eee; }
+  .task, .check, .panel, .why-panel, .quiz, .live, .lab { break-inside: avoid; }
+  .quiz-option { color: black; background: white; }
+  .debug-check { border-color: #777; }
+}

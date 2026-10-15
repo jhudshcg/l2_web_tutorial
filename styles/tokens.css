@@ -1,0 +1,45 @@
+/* Design tokens: every colour and shared size used by the tutorial pages.
+   Change a value here and it updates everywhere. */
+:root {
+  color-scheme: light;
+
+  /* Neutrals */
+  --ink: #182b3a;
+  --paper: #faf9f5;
+  --line: #c8d4d4;
+  --mute: #42596a;
+  --code-bg: #162b38;
+  --focus: #a34400;
+
+  /* Brand and signpost colours */
+  --teal: #00665f;
+  --amber: #925000;
+  --blue: #3150a1;
+  --pink: #91475d;
+  --purple: #6a3e93;
+
+  /* Per-lesson theme (overridden by body[data-step] below) */
+  --accent: var(--teal);
+  --tint: #e4f3ed;
+
+  /* Page side padding. Smaller on phones (see mobile.css). */
+  --gutter: 1.25rem;
+}
+
+/* Each lesson has its own accent colour. */
+body[data-step="1"] { --accent: var(--blue);   --tint: #eaf0ff; }
+body[data-step="2"] { --accent: #9d4231;       --tint: #ffede6; }
+body[data-step="3"] { --accent: var(--purple); --tint: #f2eafa; }
+body[data-step="4"] { --accent: var(--amber);  --tint: #fff2d7; }
+body[data-step="5"] { --accent: var(--teal);   --tint: #e4f3ed; }
+body[data-step="6"] { --accent: var(--pink);   --tint: #fcebf0; }
+body[data-step="7"] { --accent: #2f6b3a;       --tint: #e8f4e6; }
+
+/* Icon-tile colours, matching the lesson themes. */
+.tone-1 { background: #eaf0ff; color: var(--blue); }
+.tone-2 { background: #ffede6; color: #9d4231; }
+.tone-3 { background: #f2eafa; color: var(--purple); }
+.tone-4 { background: #fff2d7; color: var(--amber); }
+.tone-5 { background: #e4f3ed; color: var(--teal); }
+.tone-6 { background: #fcebf0; color: var(--pink); }
+.tone-7 { background: #e8f4e6; color: #2f6b3a; }

@@ -18,7 +18,7 @@ a {
   color: #00635b;
 }
 a:focus-visible, button:focus-visible,
-input:focus-visible, textarea:focus-visible {
+input:focus-visible, textarea:focus-visible, select:focus-visible {
   outline: 3px solid #a34400;
   outline-offset: 3px;
 }
@@ -72,14 +72,21 @@ nav a {
 label {
   display: block;
   margin-top: 1rem;
+  font-weight: 600;
 }
-input, textarea {
+input, select, textarea {
   display: block;
   width: 100%;
   max-width: 36rem;
   font: inherit;
   padding: 0.6rem;
-  border: 1px solid #55776e;
+  border: 2px solid #55776e;
+  border-radius: 6px;
+}
+input:user-invalid,
+textarea:user-invalid {
+  border-color: #b3261e;
+  background: #fff1f0;
 }
 button {
   margin-top: 1rem;

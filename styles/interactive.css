@@ -1,0 +1,67 @@
+/* Interactive widgets: live editors, labs, the responsive-width lab and the forms lab.
+   Behaviour lives in tutorial.js (live editors, labs) and forms-lab.js (validation explorer). */
+
+/* ---- Shared frame ---- */
+.live, .lab { margin: 1.4rem 0; padding: 1rem; border: 2px solid var(--accent); border-radius: 14px; background: white; }
+.live > h3, .lab > h3 { margin-top: 0; display: flex; align-items: center; gap: .5rem; color: var(--accent); }
+
+/* ---- Live editor: code on one side, result on the other ---- */
+.live-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.live-grid textarea { display: block; height: 12rem; white-space: pre-wrap; overflow: hidden; resize: none; background: var(--code-bg); color: #effaf8; border-radius: 8px; }
+.live-grid iframe { height: 8rem; border-radius: 8px; border-width: 1px; }
+.live-label { margin: 0 0 .3rem; font-size: .85rem; font-weight: 750; color: var(--accent); }
+
+/* ---- Lab: controls change CSS on a sample and a code panel shows the result ---- */
+.lab-controls { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; margin: .6rem 0 1rem; align-items: end; }
+.lab-controls label { font-size: .9rem; font-weight: 650; }
+.lab-controls select { display: block; margin-top: .2rem; font: inherit; padding: .35rem .5rem; border: 1px solid #52756e; border-radius: 6px; background: white; color: var(--ink); }
+.lab-controls input[type="range"] { display: block; width: 9rem; margin-top: .4rem; accent-color: var(--accent); }
+.lab-controls input[type="checkbox"], .lab-controls input[type="radio"] { accent-color: var(--accent); }
+.lab-controls output { font-family: ui-monospace, Consolas, monospace; color: var(--accent); margin-left: .3rem; }
+.lab-stage { padding: .8rem; background: #edf5f1; border: 2px dashed #7a9a94; border-radius: 10px; overflow: hidden; }
+.lab-stage .lab-target { min-height: 9rem; }
+.lab-stage .tall { min-height: 5rem; }
+.lab-code { margin: .8rem 0 0; }
+.lab-note { font-size: .9rem; margin: .5rem 0 0; color: var(--mute); }
+pre .on { background: #2f6b5a; border-radius: 3px; box-shadow: 0 0 0 2px #7fd4b8; }
+
+/* Coloured boxes used as sample items in the Flexbox and Grid labs */
+.lab-stage .item, .bp-grid .item { display: flex; align-items: center; justify-content: center; border-radius: 6px; background: var(--accent); color: white; font-weight: 750; }
+.lab-stage .item { min-width: 3rem; min-height: 3rem; padding: .4rem .7rem; }
+.lab-stage .item:nth-child(3n+2), .bp-grid .item:nth-child(3n+2) { background: var(--amber); }
+.lab-stage .item:nth-child(3n), .bp-grid .item:nth-child(3n) { background: var(--blue); }
+
+/* ---- Responsive lab: a slider changes a pretend screen width ---- */
+.bp-stage { overflow: hidden; border-radius: 10px; background: #dbe5e3; padding: .5rem 0 .5rem .5rem; }
+.bp-frame { background: white; border: 3px solid #52756e; border-radius: 10px; transform-origin: top left; padding: .7rem; }
+.bp-bar { display: flex; gap: .5rem; align-items: center; padding: .4rem .6rem; margin-bottom: .6rem; background: var(--ink); color: white; border-radius: 6px; font-size: .85rem; }
+.bp-bar b { font-weight: 750; }
+.bp-grid { display: grid; gap: .6rem; }
+.bp-grid .item { min-height: 3.2rem; }
+.bp-readout { margin: .5rem 0 0; font-weight: 750; color: var(--accent); }
+
+/* ---- Forms lab: validation explorer ---- */
+.fl-box { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; margin: .6rem 0 1rem; align-items: end; }
+.fl-box label { font-size: .9rem; font-weight: 650; }
+.fl-box select, .fl-box input[type="number"] { display: block; margin-top: .2rem; font: inherit; padding: .35rem .5rem; border: 1px solid #52756e; border-radius: 6px; background: white; color: var(--ink); max-width: 8rem; }
+.fl-box select { max-width: none; }
+.fl-lab { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.fl-lab form { padding: 1rem; background: #fcf7f9; border: 1px solid var(--line); border-radius: 10px; }
+.fl-lab label { margin-top: 0; }
+.fl-lab input[type="text"], .fl-lab input[type="email"], .fl-lab input[type="number"], .fl-lab input[type="url"], .fl-lab input[type="tel"], .fl-lab input[type="date"], .fl-lab input[type="password"] { display: block; width: 100%; font: inherit; padding: .5rem; margin: .3rem 0 .7rem; border: 2px solid #52756e; border-radius: 6px; background: white; }
+.fl-lab input:user-invalid { border-color: #b3261e; background: #fff1f0; }
+.fl-lab input:user-valid { border-color: #1b7a43; }
+.fl-result { margin: .6rem 0 0; padding: .6rem .8rem; border-radius: 6px; font-weight: 650; background: #eef2f4; }
+.fl-result[data-state="ok"] { background: #e4f3ed; color: #00502a; }
+.fl-result[data-state="bad"] { background: #fff1f0; color: #8a1b14; }
+
+/* ---- Forms lab: styling sample. Custom properties are set by the lab controls. ---- */
+.styled-form-demo { max-width: 28rem; }
+.styled-form-demo label { margin-top: .8rem; font-weight: 600; }
+.styled-form-demo input, .styled-form-demo select, .styled-form-demo textarea { display: block; width: 100%; font: inherit; padding: var(--sf-pad, .6rem); margin-top: .25rem; border: var(--sf-border, 2px solid #55776e); border-radius: var(--sf-radius, 6px); background: white; color: var(--ink); }
+.styled-form-demo input:focus, .styled-form-demo select:focus, .styled-form-demo textarea:focus { outline: var(--sf-focus, 3px solid #a34400); outline-offset: 2px; }
+.styled-form-demo .demo-button { margin-top: 1rem; padding: .7rem 1rem; background: var(--sf-btn, #00635b); color: white; border: 0; border-radius: var(--sf-radius, 6px); font: inherit; cursor: pointer; }
+
+@media (max-width: 700px) {
+  .live-grid, .fl-lab { grid-template-columns: 1fr; }
+}

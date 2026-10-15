@@ -1,21 +1,38 @@
 # Web project workshop
 
-Open `project_tutorial.html` in a browser. Keep this folder together so the lesson links, styles and examples work. No server, build tools or account is needed. W3Schools and other external reading links need internet access.
+Open `project_tutorial.html` in a browser. Keep this folder together so the lesson links, styles, scripts and examples work. No server, build tools or account is needed. W3Schools and other external links need internet access.
 
-Six lessons cover first files, HTML elements/attributes, semantic pages, external CSS, Flexbox/Grid/media queries, and prototype forms/testing. Each has a practical task, expected result and a check. Lesson 6 is longer and can be split into forms and project completion. The full project still needs dedicated research, proposal, planning and evaluation work.
+## The seven lessons
 
-`example/` is a five-page fictional reference site. Learners should build their own practice files from the lessons, then apply those skills to their own project. It is not an assessed-project submission. The local SVG is original tutorial artwork and may be reused for teaching and practice. The form uses a small JavaScript helper for local browser validation; it sends and stores nothing. With JavaScript disabled the check button has no action. The responsive lesson's two preview buttons also need JavaScript; resizing the browser provides the same comparison without it.
+1. Your first HTML page
+2. Elements and attributes
+3. Pages with meaning (semantic HTML)
+4. Style with CSS
+5. Responsive layouts: Flexbox, Grid and media queries
+6. Forms and validation: a contact form with native browser checking
+7. Test and publish: testing, project preparation, publishing and hand-in
 
-Teacher context and the complete evidence map are in `../web_project_planning_data.md`. Source of truth: `Web Assignment Brief.docx`, plus the assignment guide and question template. The old two-part project framing has been removed. The current brief permits optional backend work; no backend is needed for this essentials sequence.
+Each lesson has a short explanation led by diagrams, an interactive demo, a practical task with an expected result, "Pause and check" questions and a "Spot the error" question. Advanced topics link to W3Schools instead of being explained in the lesson.
 
-Examples and explanations are original. Further reading is linked beside the relevant lesson. Technical cross-checks: [MDN HTML syntax](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax), [MDN responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), [MDN form validation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). W3Schools links were checked during creation on 10 September 2026.
+## Interactive features
 
-Visual assets in `assets/` are original vector teaching diagrams. All interface icons are original inline SVG. They stay sharp when enlarged and are stored locally. No external image/font service is required. Decorative icons are hidden from assistive technology; diagram images have descriptive alternatives.
+- **Live editors** (`data-live`): learners edit HTML/CSS and see the result straight away. The result runs in a sandboxed frame. Form editors also allow a tiny helper script, so native validation can be tried safely.
+- **Labs** (`data-lab`): sliders and menus change CSS on a sample and show the matching code. Lesson 5 uses them for Flexbox and Grid, with boxes that glide to their new positions (reduced motion is respected).
+- **Responsive lab** (`data-bp`): a width slider lights up the media queries that apply.
+- **Validation explorer** (`data-attrlab`, `forms-lab.js`): change `required`, `type`, `minlength`, `pattern` and more, and see the browser's own message.
+- All of these need JavaScript. Without it the code and diagrams still display, and each quiz offers its answer in a disclosure. Nothing is saved or sent.
 
-Validation: all 12 HTML pages were checked in headless Chrome at 360px and 1440px, with no page-level horizontal overflow and all images loading. The reference grid showed one/two/three columns at 360/768/1024px. Empty fields, invalid email, missing message and valid form inputs behaved as described; the responsive preview buttons worked. Desktop and phone screenshots were reviewed. Static checks covered HTML nesting, unique IDs, one main heading/main landmark, image alternatives and local file/fragment links. These checks are not a full accessibility audit or cross-browser certification.
+## Files
 
-Classroom update: students work in college OneDrive/L2 Digital/Web Development, using a website subfolder opened in VS Code. HTML preview uses VS Code's integrated browser (see the official HTML preview guide linked in step 1). The first lesson now gives separate heading, paragraph and section-heading practice; all later lessons include added recap/example scaffolding. Twelve local multiple-choice checks give explanatory feedback and allow retries. Buttons need JavaScript; without it, each check offers its answer in a disclosure. No answers are persisted or transmitted.
+- `tutorial.css` is the one stylesheet every lesson links. It only imports the files in `styles/`, loaded in this order: `tokens.css` (colours, lesson themes, sizes), `base.css` (reset, typography, plain elements), `layout.css` (page frame), `components.css` (call-outs, code blocks, diagrams, tables, quizzes), `interactive.css` (live editors and labs), `mobile.css` (edge-to-edge cards at 440px and below) and `print.css`. Change a colour in `tokens.css`; add a new block to `components.css`. `tutorial.js` holds the shared behaviour and `forms-lab.js` is for lesson 6 only.
+- `assets/`: original SVG teaching images, and `assets/practice/` with the cat-in-sunglasses practice image (PNG, JPG, SVG) used in lesson 2. Lessons also use original inline SVG diagrams, with descriptive titles and captions. Wide diagrams have a stacked `.narrow` version for phones.
+- `example/`: a five-page fictional reference site (Alex Rivers) for comparison. It is not an assessed-project submission. Its contact form uses native validation; a small script only stops the practice form reloading and sends or stores nothing.
 
-Revision checks: repeated the desktop/mobile and existing-example checks after adding the scaffolding and motivation sections. All 12 multiple-choice questions were exercised with wrong and correct answers, retry feedback and single-selection state; keyboard activation and the no-JavaScript answer fallback were checked. HTML nesting, IDs and local links/anchors also passed. VS Code preview instructions were verified against its official documentation; browser automation used Chrome, not a live college VS Code installation.
+## Notes for staff
 
-Debugging update: every tutorial page, including Start here, now includes a Spot the error question (seven total). Examples cover a missing angle bracket, missing heading closing tag, unclosed attribute quote, filename typo, missing class-selector dot, missing media-query unit and a mismatched form label/input ID. Each provides a hint, clickable answers with specific feedback, and a worked correction. Deliberately broken code is escaped as text so it does not break the resource itself. There are now 19 interactive questions overall. The five-page reference website remains a clean working example.
+- The tutorials teach front-end skills only. The brief permits optional back-end work; none is needed here. The contact form is a prototype: a real inbox needs a server or service.
+- Teacher context and the evidence map are in `../web_project_planning_data.md`. Source of truth: `Web Assignment Brief.docx`, plus the assignment guide and question template.
+- Students work in college OneDrive/L2 Digital/Web Development, using a `website` subfolder opened in VS Code with its integrated browser preview.
+- External W3Schools links were checked when the lessons were revised (October 2026). Technical cross-checks: [MDN HTML syntax](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax), [MDN responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), [MDN form validation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
+- Revision (student feedback): lesson text was reduced by roughly 40–55%, with diagrams, live editors and labs doing more of the teaching. Lesson 5 gained Flexbox/Grid basics with interactive demos. Lesson 6 became a dedicated forms and validation lesson. The old project-check material moved to the new lesson 7.
+- `:user-invalid` (lesson 6 styling) is supported in current Chrome, Edge, Firefox and Safari. In older browsers the red error styling simply does not appear; validation still works.

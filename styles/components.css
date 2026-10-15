@@ -1,0 +1,126 @@
+/* Components: reusable building blocks used inside lesson pages.
+   Interactive widgets (live editors, labs) live in interactive.css. */
+
+/* ---- Lesson header ---- */
+.lesson-badge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .7rem; background: var(--tint); color: var(--accent); padding: .5rem .8rem; border-radius: 8px; margin-bottom: .6rem; font-size: .9rem; font-weight: 750; }
+.badge-topic { padding-left: .7rem; border-left: 1px solid currentColor; }
+.lesson-visual { margin: 1.5rem 0 2rem; }
+.lesson-visual img { display: block; max-width: 100%; height: auto; border-radius: 16px; }
+.skill-chips { display: flex; flex-wrap: wrap; gap: .65rem; margin: 1rem 0 1.5rem; }
+.skill-chips span { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .7rem; border-radius: 8px; background: #eaf0ff; color: var(--blue); font-weight: 650; font-size: .9rem; }
+.skill-chips span:nth-child(2) { background: #fff2d7; color: var(--amber); }
+.skill-chips span:nth-child(3) { background: #e4f3ed; color: var(--teal); }
+
+/* ---- Link cards (start page, project checklist) ---- */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.card { display: block; border: 1px solid var(--line); border-bottom-width: 4px; background: white; padding: 1.2rem; border-radius: 14px; color: var(--ink); text-decoration: none; }
+.card:hover { border-color: #6b9690; background: #fbfffd; }
+.card strong { display: block; color: #005e75; font-size: 1.15rem; text-decoration: underline; }
+.card span { display: block; margin-top: .5rem; }
+.card .card-top { display: flex; align-items: center; gap: .8rem; margin: 0 0 .8rem; }
+.card .card-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.8rem; height: 2.8rem; border-radius: 10px; margin: 0; }
+.card .kicker { margin: 0; }
+
+/* ---- Call-out boxes ---- */
+.panel, .task, .check { border: 1px solid var(--line); padding: 1.25rem; border-radius: 12px; margin: 1.3rem 0; background: white; }
+.panel h2, .task h2, .check h2 { margin-top: 0; }
+.task { border-left: 5px solid var(--teal); background: #eaf5f1; }
+.check { border-left: 5px solid var(--focus); background: #fff5df; }
+.task h2, .check h2 { display: flex; align-items: center; gap: .6rem; }
+.task h2 .icon { color: var(--teal); }
+.check h2 .icon { color: var(--amber); }
+
+.recap { border-left: 4px solid var(--accent); padding: .2rem 1.2rem; margin: 1.7rem 0; background: var(--tint); border-radius: 0 10px 10px 0; }
+.recap h2 { font-size: 1.2rem; margin-top: .8rem; }
+
+.why-panel { margin: 1.6rem 0; padding: 1rem 1.2rem; background: #fff3df; border: 1px solid #e2c796; border-left: 5px solid #a46712; border-radius: 10px; }
+.why-panel h2 { margin-top: .15rem; font-size: 1.2rem; }
+
+.more { margin: 1.6rem 0; padding: 1rem 1.2rem; border: 1px dashed #7a9a94; border-radius: 12px; background: white; }
+.more h2 { display: flex; align-items: center; gap: .6rem; margin: 0 0 .4rem; font-size: 1.2rem; }
+.more ul { margin: .3rem 0; padding-left: 1.3rem; }
+.more p { margin: .3rem 0; font-size: .95rem; }
+
+/* ---- Code blocks ---- */
+.code-title { display: flex; align-items: center; gap: .6rem; max-width: none; font-weight: 700; font-size: .9rem; line-height: 1.4; padding: .65rem 1rem; margin-bottom: 0; background: #dce8e9; border-radius: 9px 9px 0 0; }
+.code-title + pre { margin-top: 0; border-radius: 0 0 9px 9px; }
+pre .hl { background: #2f5b57; border-radius: 3px; padding: 0 .15em; }
+pre .cm { color: #9fc4bd; }
+
+.text-preview { background: #fff; color: #111; padding: 1rem; border: 1px solid var(--line); font-family: Georgia, serif; }
+.text-preview .preview-h1 { font-size: 2rem; font-weight: bold; line-height: 1.2; }
+
+/* Code beside its rendered result */
+.compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.2rem 0; align-items: start; }
+.compare > * { min-width: 0; }
+.compare pre { margin: 0; }
+.result { position: relative; margin: 0; padding: 2rem 1rem 1rem; background: white; border: 1px solid var(--line); border-radius: 8px; }
+.result::before { content: "Result"; position: absolute; top: 0; left: 0; padding: .15rem .6rem; background: var(--tint); color: var(--accent); font-size: .8rem; font-weight: 750; border-radius: 8px 0 8px 0; }
+.result > :first-child { margin-top: 0; }
+.result > :last-child { margin-bottom: 0; }
+
+/* ---- Diagrams ---- */
+/* Wide diagrams are redrawn as a narrower <svg class="narrow"> for phones. */
+.fig { margin: 1.3rem 0; padding: 1rem; background: white; border: 1px solid var(--line); border-radius: 14px; }
+.fig svg { display: block; width: 100%; height: auto; max-width: 760px; margin: 0 auto; font-family: system-ui, sans-serif; }
+.fig figcaption { margin-top: .6rem; text-align: center; font-size: .9rem; color: var(--mute); }
+.fig .narrow { display: none; }
+
+.axis-anim { stroke-dasharray: 8 8; animation: march 1s linear infinite; }
+.pulse-anim { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes march { to { stroke-dashoffset: -16; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .axis-anim, .pulse-anim { animation: none; } }
+
+/* Numbered step strip */
+.flow { list-style: none; counter-reset: flow; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: .9rem; padding: 0; margin: 1.3rem 0; }
+.flow li { counter-increment: flow; position: relative; margin: 0; padding: .8rem; background: var(--tint); border: 1px solid var(--line); border-radius: 12px; text-align: center; line-height: 1.35; }
+.flow li::before { content: counter(flow); display: block; width: 1.8rem; height: 1.8rem; margin: 0 auto .4rem; border-radius: 50%; background: var(--accent); color: white; font-weight: 750; line-height: 1.8rem; }
+.flow li:not(:last-child)::after { content: "\2192"; position: absolute; right: -.85rem; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 750; z-index: 1; }
+.flow strong, .flow span { display: block; }
+.flow span { font-size: .9rem; }
+
+/* ---- Tables (rows become stacked cards on phones; each <td> needs data-label) ---- */
+.table-wrap { overflow: visible; }
+
+/* ---- Self-test: quiz questions and "Spot the error" ---- */
+.quiz { min-width: 0; margin: 1.5rem 0; padding: 1.1rem; border: 2px solid #c5d6df; border-radius: 12px; background: #f0f5fa; }
+/* A legend normally straddles the fieldset's top border. Floating it full width keeps the question inside the box. */
+.quiz legend { float: left; width: 100%; padding: 0; margin: 0 0 .6rem; font-weight: 750; }
+.quiz legend + * { clear: both; }
+.quiz-options { display: grid; gap: .65rem; }
+.quiz-option { display: flex; gap: .75rem; align-items: center; width: 100%; text-align: left; color: var(--ink); background: white; border: 1px solid #7992a3; line-height: 1.5; }
+.quiz-option:hover { background: #e3edf5; }
+.quiz-option[aria-pressed="true"] { background: #dbe9fa; border: 2px solid var(--blue); }
+.quiz-option:disabled { cursor: default; }
+.answer-letter { display: inline-flex; justify-content: center; align-items: center; flex: 0 0 1.8rem; height: 1.8rem; border-radius: 50%; background: #e7edf2; color: #29465d; font-weight: 750; }
+.quiz-feedback:not(:empty) { margin-top: 1rem; padding: .8rem; border-left: 4px solid #a35a0c; background: #fff3de; }
+.quiz-feedback[data-result="correct"] { border-color: var(--teal); background: #e4f3ed; }
+
+.debug-check { margin: 2rem 0; padding: 1.2rem; border: 2px solid #baa8d8; border-radius: 14px; background: #f5f0fc; }
+.debug-check > h2 { margin-top: .4rem; }
+.debug-check > .kicker { color: #623d8e; }
+.debug-check .quiz { background: white; }
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .compare { grid-template-columns: 1fr; }
+  .flow { grid-auto-flow: row; }
+  .flow li:not(:last-child)::after { content: "\2193"; right: auto; left: 50%; top: auto; bottom: -1.1rem; transform: translateX(-50%); }
+}
+@media (max-width: 600px) {
+  .fig .wide { display: none; }
+  .fig .narrow { display: block; }
+  .table-wrap table, .table-wrap thead, .table-wrap tbody, .table-wrap tr, .table-wrap th, .table-wrap td { display: block; }
+  /* Column headings move off-screen but stay available to screen readers; each cell shows its own data-label. */
+  .table-wrap thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .table-wrap tr { margin-bottom: .8rem; border: 1px solid var(--line); border-radius: 8px; background: white; }
+  .table-wrap td { border: 0; border-bottom: 1px solid var(--line); }
+  .table-wrap td:last-child { border-bottom: 0; }
+  .table-wrap td[data-label]::before { content: attr(data-label); display: block; font-size: .8rem; font-weight: 750; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+}
+@media (max-width: 480px) {
+  .cards { grid-template-columns: 1fr; }
+  .panel, .task, .check { padding: 1rem; }
+  .debug-check { padding: .8rem; }
+}

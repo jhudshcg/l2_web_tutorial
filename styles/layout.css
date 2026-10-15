@@ -1,0 +1,33 @@
+/* Layout: page frame (header, side navigation, main column, pager, footer). */
+.site-header { background: var(--ink); color: white; padding: 1.1rem max(1rem, calc((100% - 1120px) / 2)); border-bottom: 5px solid #a5d8c4; }
+.site-header a { color: white; font-weight: 700; }
+.site-header p { margin: .15rem 0; font-size: .9rem; color: #d1e9e5; }
+
+.shell { max-width: 1160px; margin: auto; padding: 2rem var(--gutter) 4rem; display: grid; gap: 2.5rem; grid-template-columns: 235px minmax(0, 1fr); }
+main { min-width: 0; }
+
+/* Lesson navigation (left column; collapses above the lesson on small screens) */
+.lesson-nav { align-self: start; padding: 1.15rem; background: #f0f2ee; border-radius: 14px; font-size: .95rem; }
+.lesson-nav ol { margin: .5rem 0; padding-left: 1.5rem; }
+.lesson-nav li { padding: .45rem .2rem; }
+.lesson-nav li::marker { color: var(--accent); font-weight: 750; }
+.lesson-nav a { display: inline-block; padding: .2rem; }
+.lesson-nav [aria-current="page"] { color: var(--accent); font-weight: 750; text-decoration-thickness: .18em; }
+.lesson-menu { border-top: 0; padding: .4rem 0 0; }
+.lesson-menu summary { font-size: .85rem; color: var(--mute); padding: .45rem 0; }
+
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+.pager a { padding: .6rem .8rem; background: var(--tint); border-radius: 7px; color: var(--accent); font-weight: 650; }
+
+footer { padding: 1rem var(--gutter); border-top: 1px solid var(--line); font-size: .9rem; text-align: center; }
+
+@media (min-width: 801px) {
+  .lesson-menu summary { margin-bottom: .4rem; }
+}
+
+@media (max-width: 800px) {
+  .shell { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; padding-top: 1rem; }
+  .lesson-nav { padding: .8rem 1rem; }
+  .lesson-nav ol { display: flex; flex-wrap: wrap; gap: .15rem 1.7rem; }
+  .lesson-nav li { padding: .1rem; }
+}

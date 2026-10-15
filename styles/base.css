@@ -1,0 +1,43 @@
+/* Base: reset, typography and plain HTML elements. No lesson-specific classes here. */
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body { margin: 0; color: var(--ink); background: var(--paper); font: 1.05rem/1.65 system-ui, sans-serif; }
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.13; letter-spacing: -.035em; margin: .5rem 0 1rem; }
+h2 { font-size: 1.5rem; line-height: 1.3; margin: 2rem 0 .8rem; }
+h3 { font-size: 1.15rem; margin: 1.4rem 0 .5rem; }
+p { max-width: 72ch; margin: .7rem 0; }
+li { margin: .4rem 0; }
+
+a { color: #005e75; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: .16em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+
+code { font: .93em/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; background: #e5eded; padding: .1em .25em; border-radius: 3px; overflow-wrap: anywhere; }
+pre { background: var(--code-bg); color: #effaf8; padding: 1.2rem; white-space: pre-wrap; overflow-wrap: anywhere; border-radius: 8px; font-size: .94rem; tab-size: 2; }
+pre code { background: transparent; padding: 0; color: inherit; overflow-wrap: anywhere; }
+
+button { font: inherit; background: var(--teal); color: white; border: 2px solid var(--teal); border-radius: 6px; padding: .55rem .85rem; cursor: pointer; }
+button:hover { background: #004d48; }
+button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); }
+
+label { display: block; font-weight: 650; }
+textarea { width: 100%; padding: .8rem; font: .95rem/1.5 ui-monospace, monospace; border: 1px solid #52756e; }
+iframe { display: block; width: 100%; max-width: 100%; height: 480px; border: 2px solid #52756e; background: white; }
+
+details { border-top: 1px solid var(--line); padding: .8rem 0; }
+summary { cursor: pointer; font-weight: 700; }
+
+table { border-collapse: collapse; width: 100%; background: white; }
+caption { text-align: left; font-weight: 700; padding: .5rem 0; }
+th, td { text-align: left; vertical-align: top; padding: .7rem; border: 1px solid var(--line); }
+th { background: #e7efed; }
+
+/* Small utilities */
+.small { font-size: .9rem; }
+.kicker { color: var(--teal); font-weight: 750; font-size: .85rem; letter-spacing: .07em; text-transform: uppercase; }
+.intro { font-size: 1.2rem; }
+.icon { display: inline-block; width: 1.45rem; height: 1.45rem; flex: 0 0 auto; vertical-align: -.25em; }
+.skip { position: absolute; top: -6rem; left: 1rem; background: white; padding: .7rem; z-index: 5; }
+.skip:focus { top: .5rem; }
